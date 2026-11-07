@@ -1,3 +1,8 @@
+# ===== Secrets and local configuration =====
+.env
+*.key
+*.pem
+
 # ===== Python =====
 .venv/
 venv/
@@ -8,10 +13,10 @@ __pycache__/
 .ipynb_checkpoints/
 
 # ===== Модели и веса (большие бинарники; манифесты и отчёты сохраняем) =====
-models/**
-!models/**/
-!models/**/MANIFEST.md
-!models/**/*.md
+artifacts/models/**
+!artifacts/models/**/
+!artifacts/models/**/MANIFEST.md
+!artifacts/models/**/*.md
 *.onnx
 *.safetensors
 *.gguf
@@ -21,30 +26,30 @@ models/**
 *.ckpt
 
 # ===== Данные =====
-data/raw/
-data/twix/raw/
-data/twix/*.jsonl
-data/twix/*.parquet
+artifacts/data/raw/
+artifacts/data/twix/raw/
+artifacts/data/twix/*.jsonl
+artifacts/data/twix/*.parquet
 *.parquet
 
 # ===== Android =====
-android/.gradle/
-android/build/
-android/app/build/
-android/local.properties
-android/out/
-android/app/libs/*.aar
-android/app/src/main/assets/models/
-android/app/src/main/assets/audio/
+src/mobile/android/.gradle/
+src/mobile/android/build/
+src/mobile/android/app/build/
+src/mobile/android/local.properties
+src/mobile/android/out/
+src/mobile/android/app/libs/*.aar
+src/mobile/android/app/src/main/assets/models/
+src/mobile/android/app/src/main/assets/audio/
 *.apk
 *.aab
 *.jks
 *.keystore
 
 # ===== Device bundle (бинарники и дубликаты моделей) =====
-device_bundle/bin/
-device_bundle/models/
-device_bundle/audio/
+artifacts/device_bundle/bin/
+artifacts/device_bundle/models/
+artifacts/device_bundle/audio/
 
 # ===== Логи (журнал решений logs/journal.md сохраняем) =====
 logs/*.log
@@ -63,11 +68,14 @@ logs/*.tmp
 *.bak
 *.orig
 *.rej
+tmp/
+temp/
 
 # ===== IDE / OS =====
 .idea/
 .vscode/
 *.iml
+*.swp
 Thumbs.db
 desktop.ini
 .DS_Store
