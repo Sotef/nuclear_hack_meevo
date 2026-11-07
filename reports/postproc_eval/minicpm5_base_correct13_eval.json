@@ -1,0 +1,233 @@
+{
+  "tool": "eval_postproc",
+  "version": "1.0.0",
+  "dependencies": {
+    "python": "3.12.10",
+    "third_party": [],
+    "note": "stdlib only (json, re, difflib, argparse, pathlib)"
+  },
+  "datasets": {
+    "punct": {
+      "pairs": 300,
+      "clean_marked": 50,
+      "sources": [
+        "Tatoeba Russian sentences (rus_sentences.tsv.bz2)"
+      ],
+      "licenses": [
+        "CC-BY-2.0-FR"
+      ]
+    },
+    "correction": {
+      "pairs": 13,
+      "sources": [
+        "data/test reference + tools/eval_asr/hyp/small_zipformer_ru"
+      ],
+      "licenses": [
+        "CC-BY-4.0 / MIT (see data/test/manifest.jsonl)"
+      ]
+    }
+  },
+  "inputs": {
+    "hyp": "reports\\postproc_eval\\minicpm5_base_correct13.jsonl",
+    "hyp_entries": 13,
+    "ref_punct": "data\\postproc\\punct_eval.jsonl",
+    "ref_punct_entries": 300,
+    "ref_corr": "data\\postproc\\correction_eval.jsonl",
+    "ref_corr_entries": 13,
+    "unknown_hyp_ids": [],
+    "unknown_hyp_ids_count": 0,
+    "punct_missing_ids": [
+      "punct_0001",
+      "punct_0002",
+      "punct_0003",
+      "punct_0004",
+      "punct_0005",
+      "punct_0006",
+      "punct_0007",
+      "punct_0008",
+      "punct_0009",
+      "punct_0010",
+      "punct_0011",
+      "punct_0012",
+      "punct_0013",
+      "punct_0014",
+      "punct_0015",
+      "punct_0016",
+      "punct_0017",
+      "punct_0018",
+      "punct_0019",
+      "punct_0020"
+    ],
+    "punct_missing_count": 300,
+    "corr_missing_ids": [],
+    "corr_missing_count": 0
+  },
+  "punctuation": {
+    "summary": null,
+    "per_sentence": []
+  },
+  "correction": {
+    "summary": {
+      "pairs": 13,
+      "ref_words": 497,
+      "wer_before_micro": 0.14688128772635814,
+      "wer_after_micro": 0.14688128772635814,
+      "delta_wer_micro": 0.0,
+      "wer_before_macro": 0.14433655273489882,
+      "wer_after_macro": 0.14565147712674628,
+      "improved": 1,
+      "worsened": 1,
+      "unchanged": 11,
+      "improved_share": 0.07692307692307693,
+      "worsened_share": 0.07692307692307693
+    },
+    "per_pair": [
+      {
+        "id": "diar_0001",
+        "ref_words": 58,
+        "errors_before": 6,
+        "errors_after": 6,
+        "wer_before": 0.10344827586206896,
+        "wer_after": 0.10344827586206896,
+        "delta_wer": 0.0,
+        "status": "unchanged"
+      },
+      {
+        "id": "diar_0002",
+        "ref_words": 52,
+        "errors_before": 10,
+        "errors_after": 8,
+        "wer_before": 0.19230769230769232,
+        "wer_after": 0.15384615384615385,
+        "delta_wer": -0.038461538461538464,
+        "status": "improved"
+      },
+      {
+        "id": "diar_0003",
+        "ref_words": 42,
+        "errors_before": 12,
+        "errors_after": 12,
+        "wer_before": 0.2857142857142857,
+        "wer_after": 0.2857142857142857,
+        "delta_wer": 0.0,
+        "status": "unchanged"
+      },
+      {
+        "id": "ruls_0001",
+        "ref_words": 30,
+        "errors_before": 5,
+        "errors_after": 5,
+        "wer_before": 0.16666666666666666,
+        "wer_after": 0.16666666666666666,
+        "delta_wer": 0.0,
+        "status": "unchanged"
+      },
+      {
+        "id": "ruls_0002",
+        "ref_words": 34,
+        "errors_before": 6,
+        "errors_after": 6,
+        "wer_before": 0.17647058823529413,
+        "wer_after": 0.17647058823529413,
+        "delta_wer": 0.0,
+        "status": "unchanged"
+      },
+      {
+        "id": "ruls_0003",
+        "ref_words": 32,
+        "errors_before": 4,
+        "errors_after": 4,
+        "wer_before": 0.125,
+        "wer_after": 0.125,
+        "delta_wer": 0.0,
+        "status": "unchanged"
+      },
+      {
+        "id": "ruls_0004",
+        "ref_words": 35,
+        "errors_before": 2,
+        "errors_after": 2,
+        "wer_before": 0.05714285714285714,
+        "wer_after": 0.05714285714285714,
+        "delta_wer": 0.0,
+        "status": "unchanged"
+      },
+      {
+        "id": "ruls_0005",
+        "ref_words": 44,
+        "errors_before": 9,
+        "errors_after": 9,
+        "wer_before": 0.20454545454545456,
+        "wer_after": 0.20454545454545456,
+        "delta_wer": 0.0,
+        "status": "unchanged"
+      },
+      {
+        "id": "ruls_0006",
+        "ref_words": 34,
+        "errors_before": 0,
+        "errors_after": 0,
+        "wer_before": 0.0,
+        "wer_after": 0.0,
+        "delta_wer": 0.0,
+        "status": "unchanged"
+      },
+      {
+        "id": "ruls_0007",
+        "ref_words": 42,
+        "errors_before": 3,
+        "errors_after": 3,
+        "wer_before": 0.07142857142857142,
+        "wer_after": 0.07142857142857142,
+        "delta_wer": 0.0,
+        "status": "unchanged"
+      },
+      {
+        "id": "ruls_0008",
+        "ref_words": 28,
+        "errors_before": 2,
+        "errors_after": 2,
+        "wer_before": 0.07142857142857142,
+        "wer_after": 0.07142857142857142,
+        "delta_wer": 0.0,
+        "status": "unchanged"
+      },
+      {
+        "id": "ruls_0009",
+        "ref_words": 30,
+        "errors_before": 6,
+        "errors_after": 6,
+        "wer_before": 0.2,
+        "wer_after": 0.2,
+        "delta_wer": 0.0,
+        "status": "unchanged"
+      },
+      {
+        "id": "ruls_0010",
+        "ref_words": 36,
+        "errors_before": 8,
+        "errors_after": 10,
+        "wer_before": 0.2222222222222222,
+        "wer_after": 0.2777777777777778,
+        "delta_wer": 0.05555555555555558,
+        "status": "worsened"
+      }
+    ]
+  },
+  "doubtful": {
+    "clean_sentences_total": 50,
+    "clean_sentences_evaluated": 0,
+    "clean_sentences_with_flags": 0,
+    "false_alarm_rate": 0.0,
+    "clean_flags": 0,
+    "clean_words": 0,
+    "flag_density_per_100_words": 0.0,
+    "flags_total_all_hyp": 0,
+    "error_lexemes_total": 119,
+    "error_lexemes_covered": 0,
+    "error_coverage": 0.0,
+    "pairs_with_errors": 12,
+    "pairs_covered": 0,
+    "pair_coverage": 0.0
+  }
+}

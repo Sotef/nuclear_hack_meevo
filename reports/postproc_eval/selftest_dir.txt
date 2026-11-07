@@ -1,0 +1,27 @@
+eval_postproc 1.0.0
+Python 3.12.10
+
+Inputs
+  hyp:        reports\postproc_eval\hyp_dir (2 entries)
+  ref-punct:  data\postproc\punct_eval.jsonl (300 entries)
+  ref-corr:   data\postproc\correction_eval.jsonl (13 entries)
+  punct ids missing in hyp: 298
+  correction ids missing in hyp: 13
+
+Datasets
+  punct: pairs=300 sources=Tatoeba Russian sentences (rus_sentences.tsv.bz2) licenses=CC-BY-2.0-FR
+  correction: pairs=13 sources=data/test reference + tools/eval_asr/hyp/small_zipformer_ru licenses=CC-BY-4.0 / MIT (see data/test/manifest.jsonl)
+
+Punctuation (word-aligned marks)
+  micro: P=1.000000 R=1.000000 F1=1.000000 (TP=4 FP=0 FN=0, sentences=2)
+  macro: P=1.000000 R=1.000000 F1=1.000000
+  sentence boundaries: P=1.000000 R=1.000000 F1=1.000000 (TP=2 ref=2 hyp=2)
+
+Correction (WER vs text_ref)
+  not measured: no correction ids present in hyp
+
+Doubtful flags
+  clean sentences: 2/50 evaluated, with flags=0, false-alarm rate=0.000000
+  flags on clean text=0 / 17 words (0.000 per 100 words); flags total in hyp=0
+  known ASR error lexemes: 0/0 covered (coverage=0.000000); pairs covered=0/0 (0.000000)
+

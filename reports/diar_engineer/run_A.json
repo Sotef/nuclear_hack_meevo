@@ -1,0 +1,154 @@
+{
+  "tool": "run_diar",
+  "version": "1.0.0",
+  "manifest": "data\\test\\manifest.jsonl",
+  "out": "reports\\diar_engineer\\hyp\\A_campplus_thr0.7",
+  "seg_model": "models\\diar\\sherpa-onnx-pyannote-segmentation-3-0\\model.onnx",
+  "embedding_model": "models\\diar\\3dspeaker_speech_campplus_sv_zh-cn_16k-common.onnx",
+  "threshold": 0.7,
+  "oracle_num_speakers": false,
+  "num_speakers": -1,
+  "min_duration_on": 0.3,
+  "min_duration_off": 0.5,
+  "num_threads": 1,
+  "provider": "cpu",
+  "sherpa_onnx_version": "2.0.1",
+  "python": "3.12.10",
+  "numpy": "2.5.4",
+  "soundfile": "0.14.0",
+  "total_duration_sec": 310.641,
+  "total_wall_sec": 24.08,
+  "overall_rtf": 0.0775,
+  "files": [
+    {
+      "id": "ruls_0001",
+      "duration_sec": 19.88,
+      "wall_sec": 1.395,
+      "rtf": 0.0702,
+      "num_speakers_hyp": 1,
+      "num_speakers_ref": 1,
+      "num_segments": 8,
+      "clustering": "threshold:0.7"
+    },
+    {
+      "id": "ruls_0002",
+      "duration_sec": 19.79,
+      "wall_sec": 1.707,
+      "rtf": 0.0862,
+      "num_speakers_hyp": 1,
+      "num_speakers_ref": 1,
+      "num_segments": 1,
+      "clustering": "threshold:0.7"
+    },
+    {
+      "id": "ruls_0003",
+      "duration_sec": 19.76,
+      "wall_sec": 1.336,
+      "rtf": 0.0676,
+      "num_speakers_hyp": 1,
+      "num_speakers_ref": 1,
+      "num_segments": 6,
+      "clustering": "threshold:0.7"
+    },
+    {
+      "id": "ruls_0004",
+      "duration_sec": 19.58,
+      "wall_sec": 1.393,
+      "rtf": 0.0712,
+      "num_speakers_hyp": 1,
+      "num_speakers_ref": 1,
+      "num_segments": 5,
+      "clustering": "threshold:0.7"
+    },
+    {
+      "id": "ruls_0005",
+      "duration_sec": 19.52,
+      "wall_sec": 1.607,
+      "rtf": 0.0823,
+      "num_speakers_hyp": 1,
+      "num_speakers_ref": 1,
+      "num_segments": 1,
+      "clustering": "threshold:0.7"
+    },
+    {
+      "id": "ruls_0006",
+      "duration_sec": 19.46,
+      "wall_sec": 1.338,
+      "rtf": 0.0687,
+      "num_speakers_hyp": 1,
+      "num_speakers_ref": 1,
+      "num_segments": 4,
+      "clustering": "threshold:0.7"
+    },
+    {
+      "id": "ruls_0007",
+      "duration_sec": 19.39,
+      "wall_sec": 1.512,
+      "rtf": 0.078,
+      "num_speakers_hyp": 1,
+      "num_speakers_ref": 1,
+      "num_segments": 2,
+      "clustering": "threshold:0.7"
+    },
+    {
+      "id": "ruls_0008",
+      "duration_sec": 19.14,
+      "wall_sec": 1.291,
+      "rtf": 0.0674,
+      "num_speakers_hyp": 1,
+      "num_speakers_ref": 1,
+      "num_segments": 7,
+      "clustering": "threshold:0.7"
+    },
+    {
+      "id": "ruls_0009",
+      "duration_sec": 19.06,
+      "wall_sec": 1.409,
+      "rtf": 0.0739,
+      "num_speakers_hyp": 1,
+      "num_speakers_ref": 1,
+      "num_segments": 4,
+      "clustering": "threshold:0.7"
+    },
+    {
+      "id": "ruls_0010",
+      "duration_sec": 18.98,
+      "wall_sec": 1.223,
+      "rtf": 0.0645,
+      "num_speakers_hyp": 1,
+      "num_speakers_ref": 1,
+      "num_segments": 4,
+      "clustering": "threshold:0.7"
+    },
+    {
+      "id": "diar_0001",
+      "duration_sec": 46.132,
+      "wall_sec": 4.03,
+      "rtf": 0.0874,
+      "num_speakers_hyp": 2,
+      "num_speakers_ref": 2,
+      "num_segments": 12,
+      "clustering": "threshold:0.7"
+    },
+    {
+      "id": "diar_0002",
+      "duration_sec": 33.507,
+      "wall_sec": 2.993,
+      "rtf": 0.0893,
+      "num_speakers_hyp": 3,
+      "num_speakers_ref": 3,
+      "num_segments": 9,
+      "clustering": "threshold:0.7"
+    },
+    {
+      "id": "diar_0003",
+      "duration_sec": 36.441,
+      "wall_sec": 2.847,
+      "rtf": 0.0781,
+      "num_speakers_hyp": 5,
+      "num_speakers_ref": 4,
+      "num_segments": 10,
+      "clustering": "threshold:0.7"
+    }
+  ]
+}

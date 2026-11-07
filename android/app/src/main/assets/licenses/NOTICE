@@ -1,0 +1,37 @@
+# NOTICE
+
+This directory contains a quantized ONNX Runtime GenAI export of the model
+`Vikhrmodels/QVikhr-3-1.7B-Instruction-noreasoning`.
+
+## Model attribution
+
+- Original model: QVikhr-3-1.7B-Instruction-noreasoning
+- Owner: Vikhrmodels (Vikhr Team)
+- URL: https://huggingface.co/Vikhrmodels/QVikhr-3-1.7B-Instruction-noreasoning
+- Revision: ff7a23e896ebcd28825854b31cee34dfdaedd232 (last modified 2025-05-30)
+- Base model: Qwen/Qwen3-1.7B (Apache-2.0)
+- License: Apache License, Version 2.0 (see LICENSE in this directory)
+
+## Modifications
+
+The original BF16 safetensors weights were converted to ONNX and quantized to
+int4 (block size 32, accuracy level 4) with the ONNX Runtime GenAI model builder
+for on-device inference. No fine-tuning or weight merging was performed.
+The conversion is a derivative work distributed under the same Apache-2.0 terms.
+
+## Runtime
+
+ONNX Runtime GenAI (Android AAR / Java-Kotlin API). The model package is intended
+to run locally on Android arm64-v8a; no network calls are required at inference.
+
+## Evaluation data attribution
+
+Punctuation evaluation uses sentences from Tatoeba Russian sentences
+(https://tatoeba.org), licensed CC-BY 2.0 FR. See
+`data/postproc/punct_eval.jsonl` and `reports/data_eval/POSTPROC_EVAL_SPEC.md`.
+Correction evaluation uses `data/test` references (CC-BY-4.0 / MIT, see
+`data/test/manifest.jsonl`).
+
+## No endorsement
+
+This export is not endorsed by Vikhrmodels, the Qwen team, or Microsoft.

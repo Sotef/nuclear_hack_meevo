@@ -1,0 +1,74 @@
+{
+  "audio_id": "ruls_0001",
+  "duration_sec": 19.88,
+  "language": "ru",
+  "speakers": [
+    {
+      "id": "SPEAKER_1",
+      "label": null
+    }
+  ],
+  "segments": [
+    {
+      "speaker": "SPEAKER_1",
+      "start": 0.0,
+      "end": 0.44,
+      "text": "пред нею",
+      "confidence": 0.0
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 1.2,
+      "end": 2.0,
+      "text": "все побежала",
+      "confidence": 0.0
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 2.68,
+      "end": 4.4,
+      "text": "все вокруг вдруг опустела",
+      "confidence": 0.0
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 5.4,
+      "end": 7.96,
+      "text": "воды вдруг в текли в подземные подвалы",
+      "confidence": 0.0
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 8.64,
+      "end": 10.44,
+      "text": "к решёткам хлынули каналы",
+      "confidence": 0.0
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 11.24,
+      "end": 13.6,
+      "text": "и всплыл петрополь как тритон",
+      "confidence": 0.0
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 14.32,
+      "end": 15.84,
+      "text": "по пояс воду погружён",
+      "confidence": 0.0
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 18.0,
+      "end": 19.4,
+      "text": "осада приступ",
+      "confidence": 0.0
+    }
+  ],
+  "meta": {
+    "asr_model": "sherpa-onnx-small-zipformer-ru-2024-09-18 int8",
+    "diar_model": "campplus+pyannote-seg-3.0+FastClustering(thr=0.7)",
+    "version": "baseline-0.1"
+  }
+}

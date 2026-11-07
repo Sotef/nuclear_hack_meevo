@@ -1,0 +1,54 @@
+{
+  "tool": "run_diar",
+  "version": "1.0.0",
+  "manifest": "data\\test\\manifest.jsonl",
+  "out": "reports\\diar_engineer\\sweep\\thr_0.5",
+  "seg_model": "models\\diar\\sherpa-onnx-pyannote-segmentation-3-0\\model.onnx",
+  "embedding_model": "models\\diar\\3dspeaker_speech_campplus_sv_zh-cn_16k-common.onnx",
+  "threshold": 0.5,
+  "oracle_num_speakers": false,
+  "num_speakers": -1,
+  "min_duration_on": 0.3,
+  "min_duration_off": 0.5,
+  "num_threads": 1,
+  "provider": "cpu",
+  "sherpa_onnx_version": "2.0.1",
+  "python": "3.12.10",
+  "numpy": "2.5.4",
+  "soundfile": "0.14.0",
+  "total_duration_sec": 116.081,
+  "total_wall_sec": 9.745,
+  "overall_rtf": 0.0839,
+  "files": [
+    {
+      "id": "diar_0001",
+      "duration_sec": 46.132,
+      "wall_sec": 3.963,
+      "rtf": 0.0859,
+      "num_speakers_hyp": 3,
+      "num_speakers_ref": 2,
+      "num_segments": 11,
+      "clustering": "threshold:0.5"
+    },
+    {
+      "id": "diar_0002",
+      "duration_sec": 33.507,
+      "wall_sec": 2.946,
+      "rtf": 0.0879,
+      "num_speakers_hyp": 5,
+      "num_speakers_ref": 3,
+      "num_segments": 9,
+      "clustering": "threshold:0.5"
+    },
+    {
+      "id": "diar_0003",
+      "duration_sec": 36.441,
+      "wall_sec": 2.836,
+      "rtf": 0.0778,
+      "num_speakers_hyp": 6,
+      "num_speakers_ref": 4,
+      "num_segments": 10,
+      "clustering": "threshold:0.5"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "seed": 42,
+  "tatoeba_candidates": 315600,
+  "punct_pairs": 300,
+  "punct_clean_marked": 50,
+  "punct_source": "Tatoeba Russian sentences (rus_sentences.tsv.bz2)",
+  "punct_license": "CC-BY-2.0-FR",
+  "correction_pairs": 13,
+  "correction_source": "data/test + tools/eval_asr/hyp/small_zipformer_ru",
+  "correction_license": "CC-BY-4.0 / MIT (per data/test/manifest.jsonl)"
+}

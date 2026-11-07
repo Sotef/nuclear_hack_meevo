@@ -1,0 +1,76 @@
+{
+  "audio_id": "ruls_0004",
+  "duration_sec": 19.58,
+  "language": "ru",
+  "speakers": [
+    {
+      "id": "SPEAKER_1",
+      "label": null
+    }
+  ],
+  "segments": [
+    {
+      "speaker": "SPEAKER_1",
+      "start": 0.04,
+      "end": 4.04,
+      "text": "Руслан не говоря ни слова с коня долой к нему спешит",
+      "confidence": 0.0,
+      "text_raw": "руслан не говоря ни слова с коня долой к нему спешит",
+      "doubtful": false,
+      "edits": [
+        {
+          "from": "руслан",
+          "to": "Руслан",
+          "reason": "punct"
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 4.56,
+      "end": 11.56,
+      "text": "поймал за бороду хватает волшебник силится кряхтит и вдруг с русланом улетает",
+      "confidence": 0.0,
+      "text_raw": "поймал за бороду хватает волшебник силится кряхтит и вдруг с русланом улетает",
+      "doubtful": false,
+      "edits": []
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 12.36,
+      "end": 14.4,
+      "text": "ретивый конь во след глядит",
+      "confidence": 0.0,
+      "text_raw": "ретивый конь во след глядит",
+      "doubtful": false,
+      "edits": []
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 15.24,
+      "end": 16.88,
+      "text": "уже колдун под облаками",
+      "confidence": 0.0,
+      "text_raw": "уже колдун под облаками",
+      "doubtful": false,
+      "edits": []
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 17.56,
+      "end": 19.12,
+      "text": "на бороде герой висит",
+      "confidence": 0.0,
+      "text_raw": "на бороде герой висит",
+      "doubtful": false,
+      "edits": []
+    }
+  ],
+  "meta": {
+    "asr_model": "sherpa-onnx-small-zipformer-ru-2024-09-18 int8",
+    "diar_model": "campplus+pyannote-seg-3.0+FastClustering(thr=0.7)",
+    "version": "baseline-0.2",
+    "llm_model": "Vikhrmodels/QVikhr-3-1.7B-Instruction-noreasoning int4",
+    "postproc_version": "postproc_v1 (punctuate+correct)"
+  }
+}

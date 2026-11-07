@@ -1,0 +1,77 @@
+# ===== Python =====
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# ===== Модели и веса (большие бинарники; манифесты и отчёты сохраняем) =====
+models/**
+!models/**/
+!models/**/MANIFEST.md
+!models/**/*.md
+*.onnx
+*.safetensors
+*.gguf
+*.bin
+*.pt
+*.pth
+*.ckpt
+
+# ===== Данные =====
+data/raw/
+data/twix/raw/
+data/twix/*.jsonl
+data/twix/*.parquet
+*.parquet
+
+# ===== Android =====
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+android/out/
+android/app/libs/*.aar
+android/app/src/main/assets/models/
+android/app/src/main/assets/audio/
+*.apk
+*.aab
+*.jks
+*.keystore
+
+# ===== Device bundle (бинарники и дубликаты моделей) =====
+device_bundle/bin/
+device_bundle/models/
+device_bundle/audio/
+
+# ===== Логи (журнал решений logs/journal.md сохраняем) =====
+logs/*.log
+logs/*.err
+logs/*.pid
+logs/*.console.*
+logs/*.tmp
+
+# ===== Архивы и временное =====
+*.zip
+*.tar
+*.tar.gz
+*.tar.bz2
+*.7z
+*.tmp
+*.bak
+*.orig
+*.rej
+
+# ===== IDE / OS =====
+.idea/
+.vscode/
+*.iml
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# ===== Прочее =====
+*.log
+!logs/journal.md

@@ -1,0 +1,60 @@
+{
+  "audio_id": "ruls_0010",
+  "duration_sec": 18.98,
+  "language": "ru",
+  "speakers": [
+    {
+      "id": "SPEAKER_1",
+      "label": null
+    }
+  ],
+  "segments": [
+    {
+      "speaker": "SPEAKER_1",
+      "start": 0.0,
+      "end": 3.16,
+      "text": "на ветвях кедра и берёзы скрываясь по ночам она",
+      "confidence": 0.0
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 3.92,
+      "end": 5.16,
+      "text": "минутного искала сна",
+      "confidence": 0.0
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 5.84,
+      "end": 7.32,
+      "text": "но только проливала слезы",
+      "confidence": 0.0
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 7.88,
+      "end": 9.56,
+      "text": "звала супруга и покой",
+      "confidence": 0.0
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 10.24,
+      "end": 16.16,
+      "text": "томилась грузью и зевотой и редко редко предзарёй склонясь кадре в угловой",
+      "confidence": 0.0
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 16.92,
+      "end": 18.52,
+      "text": "дремала тонкую дремотой",
+      "confidence": 0.0
+    }
+  ],
+  "meta": {
+    "asr_model": "sherpa-onnx-small-zipformer-ru-2024-09-18 int8",
+    "diar_model": "campplus+pyannote-seg-3.0+FastClustering(thr=0.7)",
+    "version": "baseline-0.1"
+  }
+}

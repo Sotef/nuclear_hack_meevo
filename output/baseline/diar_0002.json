@@ -1,0 +1,82 @@
+{
+  "audio_id": "diar_0002",
+  "duration_sec": 33.507,
+  "language": "ru",
+  "speakers": [
+    {
+      "id": "SPEAKER_1",
+      "label": null
+    },
+    {
+      "id": "SPEAKER_2",
+      "label": null
+    },
+    {
+      "id": "SPEAKER_3",
+      "label": null
+    }
+  ],
+  "segments": [
+    {
+      "speaker": "SPEAKER_2",
+      "start": 0.0,
+      "end": 0.01,
+      "text": "билет",
+      "confidence": 0.0
+    },
+    {
+      "speaker": "SPEAKER_2",
+      "start": 0.6,
+      "end": 0.8,
+      "text": "на поезд",
+      "confidence": 0.0
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 3.12,
+      "end": 4.96,
+      "text": "играй пройлист клавы кокки",
+      "confidence": 0.0
+    },
+    {
+      "speaker": "SPEAKER_2",
+      "start": 7.0,
+      "end": 8.8,
+      "text": "ты не мог бы перенести мою встречу",
+      "confidence": 0.0
+    },
+    {
+      "speaker": "SPEAKER_2",
+      "start": 9.44,
+      "end": 13.52,
+      "text": "я недоволен яндекс я недоволен яндекс маркетом пожалуйста помогите мне",
+      "confidence": 0.0
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 15.8,
+      "end": 17.96,
+      "text": "запланируй пожалуйста встречу с этим человеком",
+      "confidence": 0.0
+    },
+    {
+      "speaker": "SPEAKER_3",
+      "start": 19.64,
+      "end": 29.24,
+      "text": "могу послушать равные среди первых по радио в спальне скажи скажи мне есть ли у шоколадица доставка играть играй покинулачат клавы кокии",
+      "confidence": 0.0
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 31.04,
+      "end": 32.68,
+      "text": "воспроизведи европу плюс",
+      "confidence": 0.0
+    }
+  ],
+  "meta": {
+    "asr_model": "sherpa-onnx-small-zipformer-ru-2024-09-18 int8",
+    "diar_model": "campplus+pyannote-seg-3.0+FastClustering(thr=0.7)",
+    "version": "baseline-0.1"
+  }
+}

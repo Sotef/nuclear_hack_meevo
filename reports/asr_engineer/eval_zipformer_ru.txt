@@ -1,0 +1,24 @@
+eval_asr 1.0.0
+manifest: data\test\manifest.jsonl
+normalization: lowercase; yo->ye; punctuation removed; whitespace collapsed
+
+id                          dur_s  ref_w  hyp_w    S    D    I   err      WER
+----------------------------------------------------------------------------------
+ruls_0001                   19.88     30     28    1    2    0     3   0.1000
+ruls_0002                   19.79     34     26    7    8    0    15   0.4412
+ruls_0003                   19.76     32     32    2    1    1     4   0.1250
+ruls_0004                   19.58     35     36    2    0    1     3   0.0857
+ruls_0005                   19.52     44     44    8    0    0     8   0.1818
+ruls_0006                   19.46     34     34    0    0    0     0   0.0000
+ruls_0007                   19.39     42     42    4    0    0     4   0.0952
+ruls_0008                   19.14     28     28    1    0    0     1   0.0357
+ruls_0009                   19.06     30     27    5    3    0     8   0.2667
+ruls_0010                   18.98     36     36    4    0    0     4   0.1111
+diar_0001                   46.13     58     56    1    5    3     9   0.1552
+diar_0002                   33.51     52     54    5    3    5    13   0.2500
+diar_0003                   36.44     42     30    3   12    0    15   0.3571
+----------------------------------------------------------------------------------
+TOTAL ref_words=497 hyp_words=473 S=43 D=34 I=10 errors=87
+WER (micro) = 0.175050   WER (macro) = 0.169596
+
+dependencies: python=3.12.10 (no external runtime deps)

@@ -1,0 +1,64 @@
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/parse-options.cc:Read:374 ./bin/sherpa/sherpa-onnx-offline-speaker-diarization --segmentation.pyannote-model=/sdcard/pipeline/models/diar/pyannote-segmentation-3.0/model.fixed.onnx --embedding.model=/sdcard/pipeline/models/diar/3dspeaker_speech_campplus_sv_zh-cn_16k-common.onnx --clustering.cluster-threshold=0.7 /sdcard/pipeline/audio/diar_0002.wav 
+
+progress 2.08%
+progress 4.17%
+progress 6.25%
+progress 8.33%
+progress 10.42%
+progress 12.50%
+progress 14.58%
+progress 16.67%
+progress 18.75%
+progress 20.83%
+progress 22.92%
+progress 25.00%
+progress 27.08%
+progress 29.17%
+progress 31.25%
+progress 33.33%
+progress 35.42%
+progress 37.50%
+progress 39.58%
+progress 41.67%
+progress 43.75%
+progress 45.83%
+progress 47.92%
+progress 50.00%
+progress 52.08%
+progress 54.17%
+progress 56.25%
+progress 58.33%
+progress 60.42%
+progress 62.50%
+progress 64.58%
+progress 66.67%
+progress 68.75%
+progress 70.83%
+progress 72.92%
+progress 75.00%
+progress 77.08%
+progress 79.17%
+progress 81.25%
+progress 83.33%
+progress 85.42%
+progress 87.50%
+progress 89.58%
+progress 91.67%
+progress 93.75%
+progress 95.83%
+progress 97.92%
+progress 100.00%
+Duration : 33.507 s
+Elapsed seconds: 13.527 s
+Real time factor (RTF): 13.527 / 33.507 = 0.404
+OfflineSpeakerDiarizationConfig(segmentation=OfflineSpeakerSegmentationModelConfig(pyannote=OfflineSpeakerSegmentationPyannoteModelConfig(model="/sdcard/pipeline/models/diar/pyannote-segmentation-3.0/model.fixed.onnx", window_shift_ratio=0.1), num_threads=1, debug=False, provider="cpu"), embedding=SpeakerEmbeddingExtractorConfig(model="/sdcard/pipeline/models/diar/3dspeaker_speech_campplus_sv_zh-cn_16k-common.onnx", num_threads=1, debug=False, provider="cpu"), clustering=FastClusteringConfig(num_clusters=-1, threshold=0.7, compute_confidence=False), min_duration_on=0.3, min_duration_off=0.5)
+Started
+0.250 -- 1.195 speaker_01
+3.254 -- 5.144 speaker_00
+7.118 -- 8.958 speaker_01
+9.515 -- 13.750 speaker_01
+15.893 -- 18.205 speaker_00
+19.690 -- 23.167 speaker_02
+23.723 -- 26.305 speaker_02
+26.626 -- 29.157 speaker_00
+31.148 -- 32.819 speaker_00

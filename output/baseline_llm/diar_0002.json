@@ -1,0 +1,154 @@
+{
+  "audio_id": "diar_0002",
+  "duration_sec": 33.507,
+  "language": "ru",
+  "speakers": [
+    {
+      "id": "SPEAKER_1",
+      "label": null
+    },
+    {
+      "id": "SPEAKER_2",
+      "label": null
+    },
+    {
+      "id": "SPEAKER_3",
+      "label": null
+    }
+  ],
+  "segments": [
+    {
+      "speaker": "SPEAKER_2",
+      "start": 0.0,
+      "end": 0.01,
+      "text": "Билет",
+      "confidence": 0.0,
+      "text_raw": "билет",
+      "doubtful": false,
+      "edits": [
+        {
+          "from": "билет",
+          "to": "Билет",
+          "reason": "punct"
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_2",
+      "start": 0.6,
+      "end": 0.8,
+      "text": "на поезд",
+      "confidence": 0.0,
+      "text_raw": "на поезд",
+      "doubtful": false,
+      "edits": []
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 3.12,
+      "end": 4.96,
+      "text": "играй плейлист клавы Коки",
+      "confidence": 0.0,
+      "text_raw": "играй пройлист клавы кокки",
+      "doubtful": false,
+      "edits": [
+        {
+          "from": "пройлист",
+          "to": "плейлист",
+          "reason": "punct"
+        },
+        {
+          "from": "кокки",
+          "to": "Коки",
+          "reason": "punct"
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_2",
+      "start": 7.0,
+      "end": 8.8,
+      "text": "ты не мог бы перенести мою встречу",
+      "confidence": 0.0,
+      "text_raw": "ты не мог бы перенести мою встречу",
+      "doubtful": false,
+      "edits": []
+    },
+    {
+      "speaker": "SPEAKER_2",
+      "start": 9.44,
+      "end": 13.52,
+      "text": "я недоволен Яндекс.Маркетом пожалуйста помогите мне",
+      "confidence": 0.0,
+      "text_raw": "я недоволен яндекс я недоволен яндекс маркетом пожалуйста помогите мне",
+      "doubtful": false,
+      "edits": [
+        {
+          "from": "яндекс я недоволен яндекс маркетом",
+          "to": "Яндекс.Маркетом",
+          "reason": "punct"
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 15.8,
+      "end": 17.96,
+      "text": "запланируй встречу с этим человеком",
+      "confidence": 0.0,
+      "text_raw": "запланируй пожалуйста встречу с этим человеком",
+      "doubtful": false,
+      "edits": [
+        {
+          "from": "пожалуйста",
+          "to": "",
+          "reason": "punct"
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_3",
+      "start": 19.64,
+      "end": 29.24,
+      "text": "могу послушать равные среди первых по радио в спальне скажи скажи мне есть ли у шоколадицы доставка играть играй покинула чат клавы Коки",
+      "confidence": 0.0,
+      "text_raw": "могу послушать равные среди первых по радио в спальне скажи скажи мне есть ли у шоколадица доставка играть играй покинула чат клавы кокии",
+      "doubtful": false,
+      "edits": [
+        {
+          "from": "шоколадица",
+          "to": "шоколадицы",
+          "reason": "punct"
+        },
+        {
+          "from": "кокии",
+          "to": "Коки",
+          "reason": "punct"
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 31.04,
+      "end": 32.68,
+      "text": "воспроизведи Европу плюс",
+      "confidence": 0.0,
+      "text_raw": "воспроизведи европу плюс",
+      "doubtful": false,
+      "edits": [
+        {
+          "from": "европу",
+          "to": "Европу",
+          "reason": "punct"
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "asr_model": "sherpa-onnx-small-zipformer-ru-2024-09-18 int8",
+    "diar_model": "campplus+pyannote-seg-3.0+FastClustering(thr=0.7)",
+    "version": "baseline-0.2",
+    "llm_model": "Vikhrmodels/QVikhr-3-1.7B-Instruction-noreasoning int4",
+    "postproc_version": "postproc_v1 (punctuate+correct)"
+  }
+}

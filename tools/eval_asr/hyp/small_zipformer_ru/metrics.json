@@ -1,0 +1,86 @@
+{
+  "tool": "run_asr",
+  "version": "1.0.0",
+  "backend": "sherpa-onnx",
+  "model_dir": "models\\sherpa-onnx-small-zipformer-ru-2024-09-18",
+  "precision": "int8",
+  "threads": 1,
+  "decoding_method": "greedy_search",
+  "records": 13,
+  "total_audio_sec": 310.641,
+  "model_load_sec": 1.5278,
+  "passes": [
+    6.0565,
+    5.7159
+  ],
+  "avg_pass_sec": 5.8862,
+  "rtf": 0.018949,
+  "peak_rss_mb": 350.81,
+  "per_record": {
+    "ruls_0001": {
+      "duration_sec": 19.88,
+      "inference_sec": 0.3738,
+      "rtf": 0.018803
+    },
+    "ruls_0002": {
+      "duration_sec": 19.79,
+      "inference_sec": 0.3627,
+      "rtf": 0.018327
+    },
+    "ruls_0003": {
+      "duration_sec": 19.76,
+      "inference_sec": 0.369,
+      "rtf": 0.018674
+    },
+    "ruls_0004": {
+      "duration_sec": 19.58,
+      "inference_sec": 0.3681,
+      "rtf": 0.0188
+    },
+    "ruls_0005": {
+      "duration_sec": 19.52,
+      "inference_sec": 0.3621,
+      "rtf": 0.01855
+    },
+    "ruls_0006": {
+      "duration_sec": 19.46,
+      "inference_sec": 0.3689,
+      "rtf": 0.018957
+    },
+    "ruls_0007": {
+      "duration_sec": 19.39,
+      "inference_sec": 0.3623,
+      "rtf": 0.018685
+    },
+    "ruls_0008": {
+      "duration_sec": 19.14,
+      "inference_sec": 0.3926,
+      "rtf": 0.020512
+    },
+    "ruls_0009": {
+      "duration_sec": 19.06,
+      "inference_sec": 0.3665,
+      "rtf": 0.019229
+    },
+    "ruls_0010": {
+      "duration_sec": 18.98,
+      "inference_sec": 0.4158,
+      "rtf": 0.021907
+    },
+    "diar_0001": {
+      "duration_sec": 46.132,
+      "inference_sec": 0.8693,
+      "rtf": 0.018844
+    },
+    "diar_0002": {
+      "duration_sec": 33.507,
+      "inference_sec": 0.6356,
+      "rtf": 0.018969
+    },
+    "diar_0003": {
+      "duration_sec": 36.441,
+      "inference_sec": 0.6721,
+      "rtf": 0.018444
+    }
+  }
+}

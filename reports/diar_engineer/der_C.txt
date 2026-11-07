@@ -1,0 +1,21 @@
+eval_diar 1.0.1
+ref: data\test
+hyp: reports\diar_engineer\hyp\C_titanet_thr0.7
+collar: 0.25s  frame_step: 0.01s
+
+file                          spk ref_spk_fr   miss     fa  spk_err      DER
+----------------------------------------------------------------------------
+diar_0001                       2     3788   1178      1      709   0.4984
+diar_0002                       3     2543    748     44      101   0.3512
+diar_0003                       4     2709   1127     50      593   0.6534
+----------------------------------------------------------------------------
+OVERALL DER = 0.503429  (miss=3053 fa=95 spk_err=1403 ref_speaker_frames=9040)
+OVERLAP DER = 0.000000  (ref_speaker_frames=0)
+NON-OVERLAP DER = 0.503429  (ref_speaker_frames=9040)
+
+by reference speaker count:
+  2 speaker(s): files=1 DER=0.498416 ref_speaker_frames=3788
+  3 speaker(s): files=1 DER=0.351160 ref_speaker_frames=2543
+  4 speaker(s): files=1 DER=0.653378 ref_speaker_frames=2709
+
+dependencies: python=3.12.10 (no external runtime deps)

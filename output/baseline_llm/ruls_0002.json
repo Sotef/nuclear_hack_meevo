@@ -1,0 +1,110 @@
+{
+  "audio_id": "ruls_0002",
+  "duration_sec": 19.79,
+  "language": "ru",
+  "speakers": [
+    {
+      "id": "SPEAKER_1",
+      "label": null
+    }
+  ],
+  "segments": [
+    {
+      "speaker": "SPEAKER_1",
+      "start": 0.0,
+      "end": 2.88,
+      "text": "Прошлым взором объемлют он в последний раз",
+      "confidence": 0.0,
+      "text_raw": "прощальным взором объемлют он в последний раз",
+      "doubtful": false,
+      "edits": [
+        {
+          "from": "прощальным",
+          "to": "Прошлым",
+          "reason": "punct"
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 3.56,
+      "end": 6.2,
+      "text": "пустой аул с его забором поля,",
+      "confidence": 0.0,
+      "text_raw": "пустой аул с его забором поля",
+      "doubtful": false,
+      "edits": [
+        {
+          "from": "поля",
+          "to": "поля,",
+          "reason": "punct"
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 7.2,
+      "end": 9.04,
+      "text": "где пленный стадо пас,",
+      "confidence": 0.0,
+      "text_raw": "где пленный стадо пас",
+      "doubtful": false,
+      "edits": [
+        {
+          "from": "пас",
+          "to": "пас,",
+          "reason": "punct"
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 9.84,
+      "end": 14.32,
+      "text": "ремнины, где была чулаковы ручей, где в полдень отдыхал,",
+      "confidence": 0.0,
+      "text_raw": "ремнины где была чулаковы ручей где в полдень отдыхал",
+      "doubtful": false,
+      "edits": [
+        {
+          "from": "ремнины",
+          "to": "ремнины,",
+          "reason": "punct"
+        },
+        {
+          "from": "ручей",
+          "to": "ручей,",
+          "reason": "punct"
+        },
+        {
+          "from": "отдыхал",
+          "to": "отдыхал,",
+          "reason": "punct"
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 15.24,
+      "end": 19.32,
+      "text": "когда в горах черкес суровый свободы песни запевала.",
+      "confidence": 0.0,
+      "text_raw": "когда в горах черкес суровый свободы песни запевала",
+      "doubtful": false,
+      "edits": [
+        {
+          "from": "запевала",
+          "to": "запевала.",
+          "reason": "punct"
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "asr_model": "sherpa-onnx-small-zipformer-ru-2024-09-18 int8",
+    "diar_model": "campplus+pyannote-seg-3.0+FastClustering(thr=0.7)",
+    "version": "baseline-0.2",
+    "llm_model": "Vikhrmodels/QVikhr-3-1.7B-Instruction-noreasoning int4",
+    "postproc_version": "postproc_v1 (punctuate+correct)"
+  }
+}

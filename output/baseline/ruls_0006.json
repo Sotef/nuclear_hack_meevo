@@ -1,0 +1,60 @@
+{
+  "audio_id": "ruls_0006",
+  "duration_sec": 19.46,
+  "language": "ru",
+  "speakers": [
+    {
+      "id": "SPEAKER_1",
+      "label": null
+    }
+  ],
+  "segments": [
+    {
+      "speaker": "SPEAKER_1",
+      "start": 0.0,
+      "end": 3.96,
+      "text": "отшельник мирный и безвестный остался в счастливой глуши",
+      "confidence": 0.0
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 4.64,
+      "end": 8.08,
+      "text": "с тобой друг милый друг прелестный с тобою",
+      "confidence": 0.0
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 8.72,
+      "end": 8.73,
+      "text": "свет",
+      "confidence": 0.0
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 9.24,
+      "end": 9.84,
+      "text": "моей души",
+      "confidence": 0.0
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 10.96,
+      "end": 14.48,
+      "text": "пастушка милая внимала друзей открытый разговор",
+      "confidence": 0.0
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 15.12,
+      "end": 18.96,
+      "text": "и устремив нахана взор и улыбалась и вздыхала",
+      "confidence": 0.0
+    }
+  ],
+  "meta": {
+    "asr_model": "sherpa-onnx-small-zipformer-ru-2024-09-18 int8",
+    "diar_model": "campplus+pyannote-seg-3.0+FastClustering(thr=0.7)",
+    "version": "baseline-0.1"
+  }
+}

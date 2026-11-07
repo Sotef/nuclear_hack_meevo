@@ -1,0 +1,75 @@
+{
+  "backend": "onnx",
+  "device": "cpu",
+  "onnxruntime_genai_version": "0.19.0",
+  "model": "models\\llm\\QVikhr-3-1.7B-Instruction-noreasoning-int4",
+  "mode": "punctuate",
+  "items": 10,
+  "load_s": 5.223,
+  "wall_s": 15.148,
+  "sec_per_item": 1.5148,
+  "generated_tokens": 269,
+  "decode_tokens_per_s": 17.76,
+  "per_item": [
+    {
+      "id": "punct_0001",
+      "prompt_tokens": 77,
+      "generated_tokens": 14,
+      "total_s": 1.0065
+    },
+    {
+      "id": "punct_0002",
+      "prompt_tokens": 95,
+      "generated_tokens": 32,
+      "total_s": 1.7011
+    },
+    {
+      "id": "punct_0003",
+      "prompt_tokens": 84,
+      "generated_tokens": 21,
+      "total_s": 1.3075
+    },
+    {
+      "id": "punct_0004",
+      "prompt_tokens": 108,
+      "generated_tokens": 51,
+      "total_s": 2.5133
+    },
+    {
+      "id": "punct_0005",
+      "prompt_tokens": 80,
+      "generated_tokens": 16,
+      "total_s": 1.0496
+    },
+    {
+      "id": "punct_0006",
+      "prompt_tokens": 88,
+      "generated_tokens": 26,
+      "total_s": 1.4754
+    },
+    {
+      "id": "punct_0007",
+      "prompt_tokens": 90,
+      "generated_tokens": 28,
+      "total_s": 1.5591
+    },
+    {
+      "id": "punct_0008",
+      "prompt_tokens": 94,
+      "generated_tokens": 31,
+      "total_s": 1.6437
+    },
+    {
+      "id": "punct_0009",
+      "prompt_tokens": 92,
+      "generated_tokens": 30,
+      "total_s": 1.5991
+    },
+    {
+      "id": "punct_0010",
+      "prompt_tokens": 83,
+      "generated_tokens": 20,
+      "total_s": 1.1823
+    }
+  ]
+}

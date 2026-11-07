@@ -1,0 +1,142 @@
+{
+  "tool": "eval_diar",
+  "version": "1.0.1",
+  "ref": "data\\test",
+  "hyp": "reports\\diar_engineer\\hyp\\B_campplus_oracle",
+  "summary": {
+    "files": 3,
+    "collar_sec": 0.25,
+    "frame_step_sec": 0.01,
+    "units": "speaker-time frames at 10 ms (overlaps counted per active speaker)",
+    "total_ref_frames": 9040,
+    "miss": 3052,
+    "false_alarm": 95,
+    "speaker_error": 1843,
+    "der": 0.551991,
+    "overlap": {
+      "total_ref_frames": 0,
+      "miss": 0,
+      "false_alarm": 0,
+      "speaker_error": 0,
+      "der": 0.0
+    },
+    "nonoverlap": {
+      "total_ref_frames": 9040,
+      "miss": 3052,
+      "false_alarm": 95,
+      "speaker_error": 1843,
+      "der": 0.551991
+    },
+    "by_ref_speaker_count": {
+      "2": {
+        "files": 1,
+        "total_ref_frames": 3788,
+        "miss": 1178,
+        "false_alarm": 1,
+        "speaker_error": 717,
+        "der": 0.500528
+      },
+      "3": {
+        "files": 1,
+        "total_ref_frames": 2543,
+        "miss": 748,
+        "false_alarm": 44,
+        "speaker_error": 101,
+        "der": 0.35116
+      },
+      "4": {
+        "files": 1,
+        "total_ref_frames": 2709,
+        "miss": 1126,
+        "false_alarm": 50,
+        "speaker_error": 1025,
+        "der": 0.812477
+      }
+    }
+  },
+  "files": [
+    {
+      "total_ref": 3788,
+      "miss": 1178,
+      "false_alarm": 1,
+      "speaker_error": 717,
+      "overlap_total_ref": 0,
+      "overlap_miss": 0,
+      "overlap_false_alarm": 0,
+      "overlap_speaker_error": 0,
+      "nonoverlap_total_ref": 3788,
+      "nonoverlap_miss": 1178,
+      "nonoverlap_false_alarm": 1,
+      "nonoverlap_speaker_error": 717,
+      "der": 0.5005279831045406,
+      "overlap_der": 0.0,
+      "nonoverlap_der": 0.5005279831045406,
+      "ref_speakers": 2,
+      "hyp_speakers": 2,
+      "mapping": {
+        "SPEAKER_1": "SPEAKER_2",
+        "SPEAKER_2": "SPEAKER_1"
+      },
+      "duration_sec": 45.408,
+      "file": "diar_0001",
+      "ref_rttm": "data\\test\\diar_0001.rttm",
+      "hyp_rttm": "reports\\diar_engineer\\hyp\\B_campplus_oracle\\diar_0001.rttm"
+    },
+    {
+      "total_ref": 2543,
+      "miss": 748,
+      "false_alarm": 44,
+      "speaker_error": 101,
+      "overlap_total_ref": 0,
+      "overlap_miss": 0,
+      "overlap_false_alarm": 0,
+      "overlap_speaker_error": 0,
+      "nonoverlap_total_ref": 2543,
+      "nonoverlap_miss": 748,
+      "nonoverlap_false_alarm": 44,
+      "nonoverlap_speaker_error": 101,
+      "der": 0.3511600471883602,
+      "overlap_der": 0.0,
+      "nonoverlap_der": 0.3511600471883602,
+      "ref_speakers": 3,
+      "hyp_speakers": 3,
+      "mapping": {
+        "SPEAKER_1": "SPEAKER_3",
+        "SPEAKER_2": "SPEAKER_1",
+        "SPEAKER_3": "SPEAKER_2"
+      },
+      "duration_sec": 33.24,
+      "file": "diar_0002",
+      "ref_rttm": "data\\test\\diar_0002.rttm",
+      "hyp_rttm": "reports\\diar_engineer\\hyp\\B_campplus_oracle\\diar_0002.rttm"
+    },
+    {
+      "total_ref": 2709,
+      "miss": 1126,
+      "false_alarm": 50,
+      "speaker_error": 1025,
+      "overlap_total_ref": 0,
+      "overlap_miss": 0,
+      "overlap_false_alarm": 0,
+      "overlap_speaker_error": 0,
+      "nonoverlap_total_ref": 2709,
+      "nonoverlap_miss": 1126,
+      "nonoverlap_false_alarm": 50,
+      "nonoverlap_speaker_error": 1025,
+      "der": 0.8124769287559985,
+      "overlap_der": 0.0,
+      "nonoverlap_der": 0.8124769287559985,
+      "ref_speakers": 4,
+      "hyp_speakers": 3,
+      "mapping": {
+        "SPEAKER_1": "SPEAKER_1",
+        "SPEAKER_2": "SPEAKER_2",
+        "SPEAKER_3": "SPEAKER_4"
+      },
+      "duration_sec": 35.67,
+      "file": "diar_0003",
+      "ref_rttm": "data\\test\\diar_0003.rttm",
+      "hyp_rttm": "reports\\diar_engineer\\hyp\\B_campplus_oracle\\diar_0003.rttm"
+    }
+  ]
+}

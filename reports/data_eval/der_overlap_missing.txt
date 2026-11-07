@@ -1,0 +1,17 @@
+eval_diar 1.0.1
+ref: D:\Downloads_D\nuclear_hack\reports\data_eval\overlap_test\ref.rttm
+hyp: D:\Downloads_D\nuclear_hack\reports\data_eval\overlap_test\hyp_missing_overlap.rttm
+collar: 0.25s  frame_step: 0.01s
+
+file                          spk ref_spk_fr   miss     fa  spk_err      DER
+----------------------------------------------------------------------------
+ov                              2      345     49      0       49   0.2841
+----------------------------------------------------------------------------
+OVERALL DER = 0.284058  (miss=49 fa=0 spk_err=49 ref_speaker_frames=345)
+OVERLAP DER = 0.500000  (ref_speaker_frames=98)
+NON-OVERLAP DER = 0.198381  (ref_speaker_frames=247)
+
+by reference speaker count:
+  2 speaker(s): files=1 DER=0.284058 ref_speaker_frames=345
+
+dependencies: python=3.12.10 (no external runtime deps)

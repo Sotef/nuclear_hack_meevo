@@ -1,0 +1,138 @@
+{
+  "audio_id": "ruls_0003",
+  "duration_sec": 19.76,
+  "language": "ru",
+  "speakers": [
+    {
+      "id": "SPEAKER_1",
+      "label": null
+    }
+  ],
+  "segments": [
+    {
+      "speaker": "SPEAKER_1",
+      "start": 0.0,
+      "end": 1.28,
+      "text": "Волны роя крутизны",
+      "confidence": 0.0,
+      "text_raw": "волнами роя крутизны",
+      "doubtful": false,
+      "edits": [
+        {
+          "from": "волнами",
+          "to": "Волны",
+          "reason": "punct"
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 1.8,
+      "end": 3.32,
+      "text": "сдвигая камни вековые",
+      "confidence": 0.0,
+      "text_raw": "сдвигая камни вековые",
+      "doubtful": false,
+      "edits": []
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 3.84,
+      "end": 5.4,
+      "text": "текли потоки дождевые,",
+      "confidence": 0.0,
+      "text_raw": "текли потоки дождевые",
+      "doubtful": false,
+      "edits": [
+        {
+          "from": "дождевые",
+          "to": "дождевые,",
+          "reason": "punct"
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 6.16,
+      "end": 8.08,
+      "text": "а пленник с горной вышины",
+      "confidence": 0.0,
+      "text_raw": "а пленник с горной вышины",
+      "doubtful": false,
+      "edits": []
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 8.68,
+      "end": 8.69,
+      "text": "один",
+      "confidence": 0.0,
+      "text_raw": "один",
+      "doubtful": false,
+      "edits": []
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 9.32,
+      "end": 10.4,
+      "text": "за тучей громовую",
+      "confidence": 0.0,
+      "text_raw": "за тучей громовую",
+      "doubtful": false,
+      "edits": []
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 11.2,
+      "end": 12.8,
+      "text": "возврата солнечного ждал",
+      "confidence": 0.0,
+      "text_raw": "возврата солнечного ждал",
+      "doubtful": false,
+      "edits": []
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 13.36,
+      "end": 14.76,
+      "text": "недосягаемой грозою",
+      "confidence": 0.0,
+      "text_raw": "недосягаемой грозою",
+      "doubtful": false,
+      "edits": []
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 15.56,
+      "end": 17.08,
+      "text": "и буре немощному вою",
+      "confidence": 0.0,
+      "text_raw": "и буре немощному вою",
+      "doubtful": false,
+      "edits": []
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 17.68,
+      "end": 19.32,
+      "text": "с какой-то радостью внимала.",
+      "confidence": 0.0,
+      "text_raw": "с какой-то радостью внимала",
+      "doubtful": false,
+      "edits": [
+        {
+          "from": "внимала",
+          "to": "внимала.",
+          "reason": "punct"
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "asr_model": "sherpa-onnx-small-zipformer-ru-2024-09-18 int8",
+    "diar_model": "campplus+pyannote-seg-3.0+FastClustering(thr=0.7)",
+    "version": "baseline-0.2",
+    "llm_model": "Vikhrmodels/QVikhr-3-1.7B-Instruction-noreasoning int4",
+    "postproc_version": "postproc_v1 (punctuate+correct)"
+  }
+}

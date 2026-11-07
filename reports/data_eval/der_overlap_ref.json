@@ -1,0 +1,70 @@
+{
+  "tool": "eval_diar",
+  "version": "1.0.1",
+  "ref": "D:\\Downloads_D\\nuclear_hack\\reports\\data_eval\\overlap_test\\ref.rttm",
+  "hyp": "D:\\Downloads_D\\nuclear_hack\\reports\\data_eval\\overlap_test\\hyp_ref.rttm",
+  "summary": {
+    "files": 1,
+    "collar_sec": 0.25,
+    "frame_step_sec": 0.01,
+    "units": "speaker-time frames at 10 ms (overlaps counted per active speaker)",
+    "total_ref_frames": 345,
+    "miss": 0,
+    "false_alarm": 0,
+    "speaker_error": 0,
+    "der": 0.0,
+    "overlap": {
+      "total_ref_frames": 98,
+      "miss": 0,
+      "false_alarm": 0,
+      "speaker_error": 0,
+      "der": 0.0
+    },
+    "nonoverlap": {
+      "total_ref_frames": 247,
+      "miss": 0,
+      "false_alarm": 0,
+      "speaker_error": 0,
+      "der": 0.0
+    },
+    "by_ref_speaker_count": {
+      "2": {
+        "files": 1,
+        "total_ref_frames": 345,
+        "miss": 0,
+        "false_alarm": 0,
+        "speaker_error": 0,
+        "der": 0.0
+      }
+    }
+  },
+  "files": [
+    {
+      "total_ref": 345,
+      "miss": 0,
+      "false_alarm": 0,
+      "speaker_error": 0,
+      "overlap_total_ref": 98,
+      "overlap_miss": 0,
+      "overlap_false_alarm": 0,
+      "overlap_speaker_error": 0,
+      "nonoverlap_total_ref": 247,
+      "nonoverlap_miss": 0,
+      "nonoverlap_false_alarm": 0,
+      "nonoverlap_speaker_error": 0,
+      "der": 0.0,
+      "overlap_der": 0.0,
+      "nonoverlap_der": 0.0,
+      "ref_speakers": 2,
+      "hyp_speakers": 2,
+      "mapping": {
+        "SPEAKER_1": "SPEAKER_1",
+        "SPEAKER_2": "SPEAKER_2"
+      },
+      "duration_sec": 5.0,
+      "file": "ov",
+      "ref_rttm": "D:\\Downloads_D\\nuclear_hack\\reports\\data_eval\\overlap_test\\ref.rttm",
+      "hyp_rttm": "D:\\Downloads_D\\nuclear_hack\\reports\\data_eval\\overlap_test\\hyp_ref.rttm"
+    }
+  ]
+}

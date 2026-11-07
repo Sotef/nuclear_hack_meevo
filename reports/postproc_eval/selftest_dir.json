@@ -1,0 +1,156 @@
+{
+  "tool": "eval_postproc",
+  "version": "1.0.0",
+  "dependencies": {
+    "python": "3.12.10",
+    "third_party": [],
+    "note": "stdlib only (json, re, difflib, argparse, pathlib)"
+  },
+  "datasets": {
+    "punct": {
+      "pairs": 300,
+      "clean_marked": 50,
+      "sources": [
+        "Tatoeba Russian sentences (rus_sentences.tsv.bz2)"
+      ],
+      "licenses": [
+        "CC-BY-2.0-FR"
+      ]
+    },
+    "correction": {
+      "pairs": 13,
+      "sources": [
+        "data/test reference + tools/eval_asr/hyp/small_zipformer_ru"
+      ],
+      "licenses": [
+        "CC-BY-4.0 / MIT (see data/test/manifest.jsonl)"
+      ]
+    }
+  },
+  "inputs": {
+    "hyp": "reports\\postproc_eval\\hyp_dir",
+    "hyp_entries": 2,
+    "ref_punct": "data\\postproc\\punct_eval.jsonl",
+    "ref_punct_entries": 300,
+    "ref_corr": "data\\postproc\\correction_eval.jsonl",
+    "ref_corr_entries": 13,
+    "unknown_hyp_ids": [],
+    "unknown_hyp_ids_count": 0,
+    "punct_missing_ids": [
+      "punct_0003",
+      "punct_0004",
+      "punct_0005",
+      "punct_0006",
+      "punct_0007",
+      "punct_0008",
+      "punct_0009",
+      "punct_0010",
+      "punct_0011",
+      "punct_0012",
+      "punct_0013",
+      "punct_0014",
+      "punct_0015",
+      "punct_0016",
+      "punct_0017",
+      "punct_0018",
+      "punct_0019",
+      "punct_0020",
+      "punct_0021",
+      "punct_0022"
+    ],
+    "punct_missing_count": 298,
+    "corr_missing_ids": [
+      "diar_0001",
+      "diar_0002",
+      "diar_0003",
+      "ruls_0001",
+      "ruls_0002",
+      "ruls_0003",
+      "ruls_0004",
+      "ruls_0005",
+      "ruls_0006",
+      "ruls_0007",
+      "ruls_0008",
+      "ruls_0009",
+      "ruls_0010"
+    ],
+    "corr_missing_count": 13
+  },
+  "punctuation": {
+    "summary": {
+      "sentences": 2,
+      "tp": 4,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "ref_boundaries": 2,
+      "hyp_boundaries": 2,
+      "tp_boundaries": 2,
+      "boundary_precision": 1.0,
+      "boundary_recall": 1.0,
+      "boundary_f1": 1.0,
+      "macro_precision": 1.0,
+      "macro_recall": 1.0,
+      "macro_f1": 1.0,
+      "macro_boundary_f1": 1.0
+    },
+    "per_sentence": [
+      {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "ref_boundaries": 1,
+        "hyp_boundaries": 1,
+        "tp_boundaries": 1,
+        "boundary_precision": 1.0,
+        "boundary_recall": 1.0,
+        "boundary_f1": 1.0,
+        "ref_words": 5,
+        "hyp_words": 5,
+        "id": "punct_0001"
+      },
+      {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "ref_boundaries": 1,
+        "hyp_boundaries": 1,
+        "tp_boundaries": 1,
+        "boundary_precision": 1.0,
+        "boundary_recall": 1.0,
+        "boundary_f1": 1.0,
+        "ref_words": 12,
+        "hyp_words": 12,
+        "id": "punct_0002"
+      }
+    ]
+  },
+  "correction": {
+    "summary": null,
+    "per_pair": []
+  },
+  "doubtful": {
+    "clean_sentences_total": 50,
+    "clean_sentences_evaluated": 2,
+    "clean_sentences_with_flags": 0,
+    "false_alarm_rate": 0.0,
+    "clean_flags": 0,
+    "clean_words": 17,
+    "flag_density_per_100_words": 0.0,
+    "flags_total_all_hyp": 0,
+    "error_lexemes_total": 0,
+    "error_lexemes_covered": 0,
+    "error_coverage": 0.0,
+    "pairs_with_errors": 0,
+    "pairs_covered": 0,
+    "pair_coverage": 0.0
+  }
+}

@@ -1,0 +1,250 @@
+{
+  "audio_id": "diar_0001",
+  "duration_sec": 46.132,
+  "language": "ru",
+  "speakers": [
+    {
+      "id": "SPEAKER_1",
+      "label": null
+    },
+    {
+      "id": "SPEAKER_2",
+      "label": null
+    }
+  ],
+  "segments": [
+    {
+      "speaker": "SPEAKER_1",
+      "start": 0.0,
+      "end": 2.8,
+      "text": "Расскажи мне о сегодняшнем маршруте.",
+      "confidence": 0.0,
+      "text_raw": "расскажи мне о сегодняшнем маршруте",
+      "doubtful": false,
+      "edits": [
+        {
+          "from": "расскажи",
+          "to": "Расскажи",
+          "reason": "punct"
+        },
+        {
+          "from": "маршруте",
+          "to": "маршруте.",
+          "reason": "punct"
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 4.92,
+      "end": 8.48,
+      "text": "Возобнови пиковую даму с того места, где я остановился вчера.",
+      "confidence": 0.0,
+      "text_raw": "возобнови пиковую даму с того места где я остановился вчера",
+      "doubtful": false,
+      "edits": [
+        {
+          "from": "возобнови",
+          "to": "Возобнови",
+          "reason": "punct"
+        },
+        {
+          "from": "места",
+          "to": "места,",
+          "reason": "punct"
+        },
+        {
+          "from": "вчера",
+          "to": "вчера.",
+          "reason": "punct"
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 11.0,
+      "end": 12.44,
+      "text": "Как приготовить пиццу?",
+      "confidence": 0.0,
+      "text_raw": "как приготовить пиццу",
+      "doubtful": false,
+      "edits": [
+        {
+          "from": "как",
+          "to": "Как",
+          "reason": "punct"
+        },
+        {
+          "from": "пиццу",
+          "to": "пиццу?",
+          "reason": "punct"
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_2",
+      "start": 14.32,
+      "end": 15.84,
+      "text": "Добавь обед с Михаилом.",
+      "confidence": 0.0,
+      "text_raw": "добавь обед с михаилом",
+      "doubtful": false,
+      "edits": [
+        {
+          "from": "добавь",
+          "to": "Добавь",
+          "reason": "punct"
+        },
+        {
+          "from": "михаилом",
+          "to": "Михаилом.",
+          "reason": "punct"
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_2",
+      "start": 18.76,
+      "end": 20.32,
+      "text": "Удали мой список дел. Пожалуйста,",
+      "confidence": 0.0,
+      "text_raw": "удали мой список дел пожалуйста",
+      "doubtful": false,
+      "edits": [
+        {
+          "from": "удали",
+          "to": "Удали",
+          "reason": "punct"
+        },
+        {
+          "from": "дел пожалуйста",
+          "to": "дел. Пожалуйста,",
+          "reason": "punct"
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 23.32,
+      "end": 27.48,
+      "text": "на каком этапе находится расследование связей Трампа с Россией? Покажи",
+      "confidence": 0.0,
+      "text_raw": "на каком этапе находится расследование связей трампа с россией покажи",
+      "doubtful": false,
+      "edits": [
+        {
+          "from": "трампа",
+          "to": "Трампа",
+          "reason": "punct"
+        },
+        {
+          "from": "россией покажи",
+          "to": "Россией? Покажи",
+          "reason": "punct"
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_2",
+      "start": 28.0,
+      "end": 28.32,
+      "text": "мне ответ.",
+      "confidence": 0.0,
+      "text_raw": "мне ответ",
+      "doubtful": false,
+      "edits": [
+        {
+          "from": "ответ",
+          "to": "ответ.",
+          "reason": "punct"
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_2",
+      "start": 29.36,
+      "end": 29.37,
+      "text": "Покажи",
+      "confidence": 0.0,
+      "text_raw": "покажи",
+      "doubtful": false,
+      "edits": [
+        {
+          "from": "покажи",
+          "to": "Покажи",
+          "reason": "punct"
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_2",
+      "start": 29.88,
+      "end": 31.56,
+      "text": "мне ответ для этой задачи:",
+      "confidence": 0.0,
+      "text_raw": "мне ответ для этой задачи",
+      "doubtful": false,
+      "edits": [
+        {
+          "from": "задачи",
+          "to": "задачи:",
+          "reason": "punct"
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_2",
+      "start": 32.12,
+      "end": 34.4,
+      "text": "двести сорок шесть плюс шестьсот пятьдесят",
+      "confidence": 0.0,
+      "text_raw": "двести сорок шесть плюс шестьсот пятьдесят",
+      "doubtful": false,
+      "edits": []
+    },
+    {
+      "speaker": "SPEAKER_2",
+      "start": 35.04,
+      "end": 35.05,
+      "text": "четыре.",
+      "confidence": 0.0,
+      "text_raw": "четыре",
+      "doubtful": false,
+      "edits": [
+        {
+          "from": "четыре",
+          "to": "четыре.",
+          "reason": "punct"
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_2",
+      "start": 40.0,
+      "end": 45.2,
+      "text": "Добавь к этому письму мои контакты.",
+      "confidence": 0.0,
+      "text_raw": "добавь к этому письму мои контакты",
+      "doubtful": false,
+      "edits": [
+        {
+          "from": "добавь",
+          "to": "Добавь",
+          "reason": "punct"
+        },
+        {
+          "from": "контакты",
+          "to": "контакты.",
+          "reason": "punct"
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "asr_model": "sherpa-onnx-small-zipformer-ru-2024-09-18 int8",
+    "diar_model": "campplus+pyannote-seg-3.0+FastClustering(thr=0.7)",
+    "version": "baseline-0.2",
+    "llm_model": "Vikhrmodels/QVikhr-3-1.7B-Instruction-noreasoning int4",
+    "postproc_version": "postproc_v1 (punctuate+correct)"
+  }
+}

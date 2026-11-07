@@ -1,0 +1,24 @@
+eval_asr 1.0.0
+manifest: D:\Downloads_D\nuclear_hack\data\test\manifest.jsonl
+normalization: lowercase; yo->ye; punctuation removed; whitespace collapsed
+
+id                          dur_s  ref_w  hyp_w    S    D    I   err      WER
+----------------------------------------------------------------------------------
+ruls_0001                   19.88     30     30    0    0    0     0   0.0000
+ruls_0002                   19.79     34     34    2    0    0     2   0.0588
+ruls_0003                   19.76     32     32    1    0    0     1   0.0312
+ruls_0004                   19.58     35     36    1    0    1     2   0.0571
+ruls_0005                   19.52     44     44    4    0    0     4   0.0909
+ruls_0006                   19.46     34     34    1    0    0     1   0.0294
+ruls_0007                   19.39     42     42    2    0    0     2   0.0476
+ruls_0008                   19.14     28     28    0    0    0     0   0.0000
+ruls_0009                   19.06     30     30    2    1    1     4   0.1333
+ruls_0010                   18.98     36     36    3    0    0     3   0.0833
+diar_0001                   46.13     58     45    8   13    0    21   0.3621
+diar_0002                   33.51     52     50    6    3    1    10   0.1923
+diar_0003                   36.44     42     32    0   10    0    10   0.2381
+----------------------------------------------------------------------------------
+TOTAL ref_words=497 hyp_words=473 S=30 D=27 I=3 errors=60
+WER (micro) = 0.120724   WER (macro) = 0.101869
+
+dependencies: python=3.12.10 (no external runtime deps)

@@ -1,0 +1,25 @@
+{
+  "audio_id": "ruls_0005",
+  "duration_sec": 19.52,
+  "language": "ru",
+  "speakers": [
+    {
+      "id": "SPEAKER_1",
+      "label": null
+    }
+  ],
+  "segments": [
+    {
+      "speaker": "SPEAKER_1",
+      "start": 0.0,
+      "end": 18.88,
+      "text": "когда злодей рукою мощною своей тебя сорвал с постели брачный взвился как вихрь к облакам сквозь тяжкий дым и воздух мрачный и вдруг умчало к своим горам ты чувство и памяти лишилось и в страшном замке колдуна безмолвно трепетно бледна в одно мгновение очутилась",
+      "confidence": 0.0
+    }
+  ],
+  "meta": {
+    "asr_model": "sherpa-onnx-small-zipformer-ru-2024-09-18 int8",
+    "diar_model": "campplus+pyannote-seg-3.0+FastClustering(thr=0.7)",
+    "version": "baseline-0.1"
+  }
+}

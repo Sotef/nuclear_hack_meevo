@@ -1,0 +1,26 @@
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/parse-options.cc:Read:374 ./bin/sherpa/sherpa-onnx-offline-speaker-diarization --segmentation.pyannote-model=/sdcard/pipeline/models/diar/pyannote-segmentation-3.0/model.fixed.onnx --embedding.model=/sdcard/pipeline/models/diar/3dspeaker_speech_campplus_sv_zh-cn_16k-common.onnx --clustering.cluster-threshold=0.7 /sdcard/pipeline/audio/ruls_0001.wav 
+
+progress 9.09%
+progress 18.18%
+progress 27.27%
+progress 36.36%
+progress 45.45%
+progress 54.55%
+progress 63.64%
+progress 72.73%
+progress 81.82%
+progress 90.91%
+progress 100.00%
+Duration : 19.880 s
+Elapsed seconds: 6.191 s
+Real time factor (RTF): 6.191 / 19.880 = 0.311
+OfflineSpeakerDiarizationConfig(segmentation=OfflineSpeakerSegmentationModelConfig(pyannote=OfflineSpeakerSegmentationPyannoteModelConfig(model="/sdcard/pipeline/models/diar/pyannote-segmentation-3.0/model.fixed.onnx", window_shift_ratio=0.1), num_threads=1, debug=False, provider="cpu"), embedding=SpeakerEmbeddingExtractorConfig(model="/sdcard/pipeline/models/diar/3dspeaker_speech_campplus_sv_zh-cn_16k-common.onnx", num_threads=1, debug=False, provider="cpu"), clustering=FastClusteringConfig(num_clusters=-1, threshold=0.7, compute_confidence=False), min_duration_on=0.3, min_duration_off=0.5)
+Started
+0.031 -- 0.689 speaker_00
+1.297 -- 2.242 speaker_00
+2.782 -- 4.672 speaker_00
+5.482 -- 8.182 speaker_00
+8.755 -- 10.612 speaker_00
+11.405 -- 13.700 speaker_00
+14.375 -- 16.045 speaker_00
+18.053 -- 19.403 speaker_00

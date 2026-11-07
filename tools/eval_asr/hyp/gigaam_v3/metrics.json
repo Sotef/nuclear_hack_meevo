@@ -1,0 +1,85 @@
+{
+  "model_dir": "D:\\Downloads_D\\nuclear_hack\\models\\gigaam_v3",
+  "feature_dim": 64,
+  "model_type": "nemo",
+  "chunk_sec": 60.0,
+  "threads": 1,
+  "provider": "cpu",
+  "records": 13,
+  "total_audio_sec": 310.641,
+  "model_load_sec": 2.1626,
+  "passes": [
+    27.5978,
+    27.3465
+  ],
+  "avg_pass_sec": 27.4721,
+  "rtf": 0.088437,
+  "peak_rss_mb": 473.23,
+  "per_record": {
+    "ruls_0001": {
+      "duration_sec": 19.88,
+      "inference_sec": 1.7115,
+      "rtf": 0.086091
+    },
+    "ruls_0002": {
+      "duration_sec": 19.79,
+      "inference_sec": 1.7016,
+      "rtf": 0.085985
+    },
+    "ruls_0003": {
+      "duration_sec": 19.76,
+      "inference_sec": 1.6924,
+      "rtf": 0.085648
+    },
+    "ruls_0004": {
+      "duration_sec": 19.58,
+      "inference_sec": 1.7246,
+      "rtf": 0.088079
+    },
+    "ruls_0005": {
+      "duration_sec": 19.52,
+      "inference_sec": 1.6806,
+      "rtf": 0.086097
+    },
+    "ruls_0006": {
+      "duration_sec": 19.46,
+      "inference_sec": 1.7066,
+      "rtf": 0.087698
+    },
+    "ruls_0007": {
+      "duration_sec": 19.39,
+      "inference_sec": 1.6553,
+      "rtf": 0.085368
+    },
+    "ruls_0008": {
+      "duration_sec": 19.14,
+      "inference_sec": 1.6124,
+      "rtf": 0.08424
+    },
+    "ruls_0009": {
+      "duration_sec": 19.06,
+      "inference_sec": 1.6125,
+      "rtf": 0.084602
+    },
+    "ruls_0010": {
+      "duration_sec": 18.98,
+      "inference_sec": 1.6034,
+      "rtf": 0.08448
+    },
+    "diar_0001": {
+      "duration_sec": 46.132,
+      "inference_sec": 4.3643,
+      "rtf": 0.094604
+    },
+    "diar_0002": {
+      "duration_sec": 33.507,
+      "inference_sec": 3.0444,
+      "rtf": 0.090858
+    },
+    "diar_0003": {
+      "duration_sec": 36.441,
+      "inference_sec": 3.3258,
+      "rtf": 0.091265
+    }
+  }
+}

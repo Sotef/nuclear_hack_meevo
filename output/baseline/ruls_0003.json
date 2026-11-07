@@ -1,0 +1,88 @@
+{
+  "audio_id": "ruls_0003",
+  "duration_sec": 19.76,
+  "language": "ru",
+  "speakers": [
+    {
+      "id": "SPEAKER_1",
+      "label": null
+    }
+  ],
+  "segments": [
+    {
+      "speaker": "SPEAKER_1",
+      "start": 0.0,
+      "end": 1.28,
+      "text": "волнами роя крутизны",
+      "confidence": 0.0
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 1.8,
+      "end": 3.32,
+      "text": "сдвигая камни вековые",
+      "confidence": 0.0
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 3.84,
+      "end": 5.4,
+      "text": "текли потоки дождевые",
+      "confidence": 0.0
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 6.16,
+      "end": 8.08,
+      "text": "а пленник с горной вышины",
+      "confidence": 0.0
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 8.68,
+      "end": 8.69,
+      "text": "один",
+      "confidence": 0.0
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 9.32,
+      "end": 10.4,
+      "text": "затучей громовую",
+      "confidence": 0.0
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 11.2,
+      "end": 12.8,
+      "text": "возврата солнечного ждал",
+      "confidence": 0.0
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 13.36,
+      "end": 14.76,
+      "text": "недосягаемой грозою",
+      "confidence": 0.0
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 15.56,
+      "end": 17.08,
+      "text": "и буре немощному вою",
+      "confidence": 0.0
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 17.68,
+      "end": 19.32,
+      "text": "с какой-то радостью внимала",
+      "confidence": 0.0
+    }
+  ],
+  "meta": {
+    "asr_model": "sherpa-onnx-small-zipformer-ru-2024-09-18 int8",
+    "diar_model": "campplus+pyannote-seg-3.0+FastClustering(thr=0.7)",
+    "version": "baseline-0.1"
+  }
+}

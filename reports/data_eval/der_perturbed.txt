@@ -1,0 +1,17 @@
+eval_diar 1.0.0
+ref: D:\Downloads_D\nuclear_hack\data\test\diar_0001.rttm
+hyp: D:\Downloads_D\nuclear_hack\reports\data_eval\hyp_diar_perturbed\diar_0001.rttm
+collar: 0.25s  frame_step: 0.01s
+
+file                          spk   ref_fr   miss     fa  spk_err      DER
+----------------------------------------------------------------------------
+diar_0001                       2     3788    361      0        0   0.0953
+----------------------------------------------------------------------------
+OVERALL DER = 0.095301  (miss=361 fa=0 spk_err=0 ref_frames=3788)
+OVERLAP DER = 0.000000  (ref_frames=0)
+NON-OVERLAP DER = 0.095301  (ref_frames=3788)
+
+by reference speaker count:
+  2 speaker(s): files=1 DER=0.095301 ref_frames=3788
+
+python=3.12.10

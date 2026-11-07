@@ -1,0 +1,82 @@
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/parse-options.cc:Read:374 ./bin/sherpa/sherpa-onnx-offline-speaker-diarization --segmentation.pyannote-model=/sdcard/pipeline/models/diar/pyannote-segmentation-3.0/model.fixed.onnx --embedding.model=/sdcard/pipeline/models/diar/3dspeaker_speech_campplus_sv_zh-cn_16k-common.onnx --clustering.cluster-threshold=0.7 /sdcard/pipeline/audio/diar_0003.wav 
+
+progress 1.54%
+progress 3.08%
+progress 4.62%
+progress 6.15%
+progress 7.69%
+progress 9.23%
+progress 10.77%
+progress 12.31%
+progress 13.85%
+progress 15.38%
+progress 16.92%
+progress 18.46%
+progress 20.00%
+progress 21.54%
+progress 23.08%
+progress 24.62%
+progress 26.15%
+progress 27.69%
+progress 29.23%
+progress 30.77%
+progress 32.31%
+progress 33.85%
+progress 35.38%
+progress 36.92%
+progress 38.46%
+progress 40.00%
+progress 41.54%
+progress 43.08%
+progress 44.62%
+progress 46.15%
+progress 47.69%
+progress 49.23%
+progress 50.77%
+progress 52.31%
+progress 53.85%
+progress 55.38%
+progress 56.92%
+progress 58.46%
+progress 60.00%
+progress 61.54%
+progress 63.08%
+progress 64.62%
+progress 66.15%
+progress 67.69%
+progress 69.23%
+progress 70.77%
+progress 72.31%
+progress 73.85%
+progress 75.38%
+progress 76.92%
+progress 78.46%
+progress 80.00%
+progress 81.54%
+progress 83.08%
+progress 84.62%
+progress 86.15%
+progress 87.69%
+progress 89.23%
+progress 90.77%
+progress 92.31%
+progress 93.85%
+progress 95.38%
+progress 96.92%
+progress 98.46%
+progress 100.00%
+Duration : 36.441 s
+Elapsed seconds: 12.291 s
+Real time factor (RTF): 12.291 / 36.441 = 0.337
+OfflineSpeakerDiarizationConfig(segmentation=OfflineSpeakerSegmentationModelConfig(pyannote=OfflineSpeakerSegmentationPyannoteModelConfig(model="/sdcard/pipeline/models/diar/pyannote-segmentation-3.0/model.fixed.onnx", window_shift_ratio=0.1), num_threads=1, debug=False, provider="cpu"), embedding=SpeakerEmbeddingExtractorConfig(model="/sdcard/pipeline/models/diar/3dspeaker_speech_campplus_sv_zh-cn_16k-common.onnx", num_threads=1, debug=False, provider="cpu"), clustering=FastClusteringConfig(num_clusters=-1, threshold=0.7, compute_confidence=False), min_duration_on=0.3, min_duration_off=0.5)
+Started
+0.132 -- 1.347 speaker_00
+4.182 -- 5.937 speaker_01
+7.709 -- 9.160 speaker_00
+11.860 -- 15.775 speaker_02
+17.227 -- 19.927 speaker_03
+23.082 -- 23.977 speaker_02
+25.681 -- 27.453 speaker_05
+27.875 -- 29.005 speaker_02
+29.005 -- 29.798 speaker_00
+32.735 -- 35.182 speaker_00

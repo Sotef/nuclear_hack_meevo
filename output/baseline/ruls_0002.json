@@ -1,0 +1,53 @@
+{
+  "audio_id": "ruls_0002",
+  "duration_sec": 19.79,
+  "language": "ru",
+  "speakers": [
+    {
+      "id": "SPEAKER_1",
+      "label": null
+    }
+  ],
+  "segments": [
+    {
+      "speaker": "SPEAKER_1",
+      "start": 0.0,
+      "end": 2.88,
+      "text": "прощальным взором объемлют он в последний раз",
+      "confidence": 0.0
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 3.56,
+      "end": 6.2,
+      "text": "пустой аул с его забором поля",
+      "confidence": 0.0
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 7.2,
+      "end": 9.04,
+      "text": "где пленный стадо пас",
+      "confidence": 0.0
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 9.84,
+      "end": 14.32,
+      "text": "ремнины где была чулаковыручей где в полдень отдыхал",
+      "confidence": 0.0
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 15.24,
+      "end": 19.32,
+      "text": "когда в горах черкес суровый свободы песни запевала",
+      "confidence": 0.0
+    }
+  ],
+  "meta": {
+    "asr_model": "sherpa-onnx-small-zipformer-ru-2024-09-18 int8",
+    "diar_model": "campplus+pyannote-seg-3.0+FastClustering(thr=0.7)",
+    "version": "baseline-0.1"
+  }
+}

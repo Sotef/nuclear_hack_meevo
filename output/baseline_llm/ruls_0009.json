@@ -1,0 +1,76 @@
+{
+  "audio_id": "ruls_0009",
+  "duration_sec": 19.06,
+  "language": "ru",
+  "speakers": [
+    {
+      "id": "SPEAKER_1",
+      "label": null
+    }
+  ],
+  "segments": [
+    {
+      "speaker": "SPEAKER_1",
+      "start": 0.0,
+      "end": 3.92,
+      "text": "Люблю воинственную живость потешных марсовых полей",
+      "confidence": 0.0,
+      "text_raw": "люблю воинственную живость потешных марсовых полей",
+      "doubtful": false,
+      "edits": [
+        {
+          "from": "люблю",
+          "to": "Люблю",
+          "reason": "punct"
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 4.68,
+      "end": 8.16,
+      "text": "пехотных ратий и коней однообразную красивость",
+      "confidence": 0.0,
+      "text_raw": "пехотных ратий и коней однообразную красивость",
+      "doubtful": false,
+      "edits": []
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 9.0,
+      "end": 13.68,
+      "text": "в их стройнозы блемом строю лоскутья сих знамён победных",
+      "confidence": 0.0,
+      "text_raw": "в их стройнозы блемом строю лоскутья сих знамён победных",
+      "doubtful": false,
+      "edits": []
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 14.48,
+      "end": 16.24,
+      "text": "сияние шапок этих медных",
+      "confidence": 0.0,
+      "text_raw": "сияние шапок этих медных",
+      "doubtful": false,
+      "edits": []
+    },
+    {
+      "speaker": "SPEAKER_1",
+      "start": 16.76,
+      "end": 18.56,
+      "text": "насквозь простреленных в бою",
+      "confidence": 0.0,
+      "text_raw": "насквозь простреленных в бою",
+      "doubtful": false,
+      "edits": []
+    }
+  ],
+  "meta": {
+    "asr_model": "sherpa-onnx-small-zipformer-ru-2024-09-18 int8",
+    "diar_model": "campplus+pyannote-seg-3.0+FastClustering(thr=0.7)",
+    "version": "baseline-0.2",
+    "llm_model": "Vikhrmodels/QVikhr-3-1.7B-Instruction-noreasoning int4",
+    "postproc_version": "postproc_v1 (punctuate+correct)"
+  }
+}

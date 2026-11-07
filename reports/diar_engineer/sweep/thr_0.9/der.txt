@@ -1,0 +1,21 @@
+eval_diar 1.0.1
+ref: data\test
+hyp: reports\diar_engineer\sweep\thr_0.9
+collar: 0.25s  frame_step: 0.01s
+
+file                          spk ref_spk_fr   miss     fa  spk_err      DER
+----------------------------------------------------------------------------
+diar_0001                       2     3788   1176      1     1185   0.6235
+diar_0002                       3     2543    748     44      537   0.5226
+diar_0003                       4     2709   1126     50     1025   0.8125
+----------------------------------------------------------------------------
+OVERALL DER = 0.651770  (miss=3050 fa=95 spk_err=2747 ref_speaker_frames=9040)
+OVERLAP DER = 0.000000  (ref_speaker_frames=0)
+NON-OVERLAP DER = 0.651770  (ref_speaker_frames=9040)
+
+by reference speaker count:
+  2 speaker(s): files=1 DER=0.623548 ref_speaker_frames=3788
+  3 speaker(s): files=1 DER=0.522611 ref_speaker_frames=2543
+  4 speaker(s): files=1 DER=0.812477 ref_speaker_frames=2709
+
+dependencies: python=3.12.10 (no external runtime deps)
