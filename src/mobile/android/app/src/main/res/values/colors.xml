@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Material 3 baseline (teal) — light theme -->
+    <color name="colorPrimary">#006B5B</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorPrimaryContainer">#78F8E0</color>
+    <color name="colorOnPrimaryContainer">#00201A</color>
+
+    <color name="colorSecondary">#4A635E</color>
+    <color name="colorOnSecondary">#FFFFFF</color>
+    <color name="colorSecondaryContainer">#CCE8E2</color>
+    <color name="colorOnSecondaryContainer">#0F2C28</color>
+
+    <color name="colorTertiary">#456179</color>
+    <color name="colorOnTertiary">#FFFFFF</color>
+    <color name="colorTertiaryContainer">#D3E4F5</color>
+    <color name="colorOnTertiaryContainer">#0E1E2E</color>
+
+    <color name="colorError">#BA1A1A</color>
+    <color name="colorOnError">#FFFFFF</color>
+    <color name="colorErrorContainer">#FFDAD6</color>
+    <color name="colorOnErrorContainer">#410002</color>
+
+    <color name="colorBackground">#FAFDFB</color>
+    <color name="colorOnBackground">#191C1B</color>
+    <color name="colorSurface">#FAFDFB</color>
+    <color name="colorOnSurface">#191C1B</color>
+    <color name="colorSurfaceVariant">#DBE5E1</color>
+    <color name="colorOnSurfaceVariant">#3F4945</color>
+    <color name="colorOutline">#6F7975</color>
+    <color name="colorOutlineVariant">#BEC9C4</color>
+
+    <color name="colorSurfaceContainerLowest">#FFFFFF</color>
+    <color name="colorSurfaceContainerLow">#F3F8F5</color>
+    <color name="colorSurfaceContainer">#EDF2EF</color>
+    <color name="colorSurfaceContainerHigh">#E8EDEA</color>
+    <color name="colorSurfaceContainerHighest">#E2E7E4</color>
+</resources>

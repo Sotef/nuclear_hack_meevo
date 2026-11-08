@@ -55,7 +55,8 @@ class Pipeline(private val ctx: Context, private val root: File) {
         val diarDir = File(root, "diar")
         val segCfg = OfflineSpeakerSegmentationModelConfig(
             pyannote = OfflineSpeakerSegmentationPyannoteModelConfig(
-                model = File(diarDir, "model.fixed.onnx").absolutePath
+                model = File(diarDir, "model.fixed.onnx").absolutePath,
+                windowShiftRatio = 0.5f
             ),
             numThreads = 2
         )

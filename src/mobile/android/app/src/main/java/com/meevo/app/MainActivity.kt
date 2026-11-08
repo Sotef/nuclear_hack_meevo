@@ -5,7 +5,6 @@ import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.content.res.ColorStateList
-import android.graphics.Typeface
 import android.media.AudioFormat
 import android.media.AudioRecord
 import android.media.MediaPlayer
@@ -20,14 +19,13 @@ import android.view.animation.AlphaAnimation
 import android.view.animation.Animation
 import android.view.animation.AnimationSet
 import android.view.animation.ScaleAnimation
-import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.ProgressBar
 import android.widget.SeekBar
-import android.widget.Spinner
 import android.widget.TextView
 import android.widget.Toast
+import androidx.documentfile.provider.DocumentFile
 import org.json.JSONArray
 import org.json.JSONObject
 import java.io.File
@@ -36,28 +34,11 @@ import java.util.concurrent.atomic.AtomicBoolean
 
 class MainActivity : Activity() {
 
-    // ---------- Скины (макеты A/B/C) ----------
-    data class Skin(
-        val name: String,
-        val bg: Int, val card: Int, val text: Int, val dim: Int,
-        val accent: Int, val onAccent: Int, val record: Int, val success: Int,
-        val fontRes: Int?, val titleRes: Int?, val dark: Boolean
-    )
-
-    private val skins = listOf(
-        Skin("A · Recorder", 0xFFFEF7FF.toInt(), 0xFFF3EDF7.toInt(), 0xFF1D1B20.toInt(),
-            0xFF49454F.toInt(), 0xFF6750A4.toInt(), 0xFFFFFFFF.toInt(), 0xFFB3261E.toInt(),
-            0xFF1B7F3B.toInt(), null, null, false),
-        Skin("B · Dot-Matrix", 0xFFEDEDEA.toInt(), 0xFFEDEDEA.toInt(), 0xFF111111.toInt(),
-            0xFF444444.toInt(), 0xFFC8101A.toInt(), 0xFFEDEDEA.toInt(), 0xFFC8101A.toInt(),
-            0xFF111111.toInt(), R.font.mono, R.font.mono, false),
-        Skin("C · Aurora Glass", 0xFF090912.toInt(), 0xFF16162B.toInt(), 0xFFFFFFFF.toInt(),
-            0xFFA0A0C0.toInt(), 0xFF8B6CFF.toInt(), 0xFFFFFFFF.toInt(), 0xFFFF5C8A.toInt(),
-            0xFF4ADE80.toInt(), R.font.manrope, R.font.playfair, true)
-    )
-    private var skin = skins[0]
+    // ---------- Цвета — из темы Material 3 (themes.xml / colors.xml) ----------
 
     companion object {
+        private const val REQ_EXPORT = 8
+
         private var pipeline: Pipeline? = null
         private var punctEngine: PunctEngine? = null
         private var llm: LlmEngine? = null
@@ -72,7 +53,6 @@ class MainActivity : Activity() {
     private lateinit var rootBox: LinearLayout
     private lateinit var titleText: TextView
     private lateinit var metaText: TextView
-    private lateinit var themeSpinner: Spinner
     private lateinit var screenRecord: LinearLayout
     private lateinit var screenProgress: LinearLayout
     private lateinit var screenResult: LinearLayout
@@ -156,16 +136,6 @@ class MainActivity : Activity() {
         setContentView(resources.getIdentifier("activity_main", "layout", packageName))
         bindViews()
         setupClicks()
-        themeSpinner.adapter = ArrayAdapter(
-            this, android.R.layout.simple_spinner_item, skins.map { it.name }
-        ).also { it.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item) }
-        themeSpinner.onItemSelectedListener = object : android.widget.AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(p0: android.widget.AdapterView<*>?, v: View?, pos: Int, id: Long) {
-                applySkin(skins[pos])
-            }
-            override fun onNothingSelected(p0: android.widget.AdapterView<*>?) {}
-        }
-        applySkin(skin)
         updateSourceLabel()
 
         Thread {
@@ -189,7 +159,6 @@ class MainActivity : Activity() {
         rootBox = find("rootBox")
         titleText = find("titleText")
         metaText = find("metaText")
-        themeSpinner = find("themeSpinner")
         screenRecord = find("screenRecord")
         screenProgress = find("screenProgress")
         screenResult = find("screenResult")
@@ -229,49 +198,6 @@ class MainActivity : Activity() {
         TypedValue.COMPLEX_UNIT_DIP, v.toFloat(), resources.displayMetrics
     ).toInt()
 
-    // ---------- Скины ----------
-    private fun applySkin(s: Skin) {
-        skin = s
-        rootBox.setBackgroundColor(s.bg)
-        val font = s.fontRes?.let { resources.getFont(it) }
-        val titleFont = s.titleRes?.let { resources.getFont(it) }
-        titleText.typeface = titleFont ?: Typeface.DEFAULT_BOLD
-        titleText.setTextColor(s.text)
-        metaText.setTextColor(s.dim)
-        metaText.typeface = font
-        sourceLabel.setTextColor(s.dim)
-        sourceLabel.typeface = font
-        stageText.setTextColor(s.dim)
-        stageText.typeface = font
-        etaText.setTextColor(s.text)
-        etaText.typeface = titleFont ?: Typeface.DEFAULT_BOLD
-        timeText.setTextColor(s.text)
-        exportText.setTextColor(s.dim)
-
-        for (b in listOf(recordButton, fileButton, runButton, tabText, tabSummary, tabChapters,
-            playButton, exportButton, backButton)) {
-            b.backgroundTintList = ColorStateList.valueOf(s.accent)
-            b.setTextColor(s.onAccent)
-            b.typeface = font
-        }
-        summaryText.setTextColor(s.text)
-        summaryText.typeface = font
-        overallBar.progressTintList = ColorStateList.valueOf(s.accent)
-        overallPct.setTextColor(s.dim)
-        seekBar.progressTintList = ColorStateList.valueOf(s.accent)
-        seekBar.thumbTintList = ColorStateList.valueOf(s.accent)
-        for (st in stageUi.values) {
-            st.bar.progressTintList = ColorStateList.valueOf(s.accent)
-            st.pct.setTextColor(s.dim)
-            st.eta.setTextColor(s.dim)
-            st.icon.setTextColor(s.accent)
-            st.icon.typeface = font
-        }
-        for (r in rings) (r.background as? android.graphics.drawable.GradientDrawable)?.setStroke(dp(2), s.record)
-        (recDot.background as? android.graphics.drawable.GradientDrawable)?.setColor(s.record)
-        recTimer.setTextColor(s.text)
-    }
-
     // ---------- Анимации ----------
     private fun startRecordPulse() {
         rings.forEachIndexed { i, ring ->
@@ -299,7 +225,7 @@ class MainActivity : Activity() {
 
     private fun flashSuccess(btn: Button, label: String) {
         val orig = btn.backgroundTintList
-        btn.backgroundTintList = ColorStateList.valueOf(skin.success)
+        btn.backgroundTintList = ColorStateList.valueOf(getColor(R.color.colorPrimary))
         btn.text = "✓"
         btn.animate().scaleX(.96f).scaleY(.96f).setDuration(100).withEndAction {
             btn.animate().scaleX(1f).scaleY(1f).setDuration(200).start()
@@ -336,31 +262,30 @@ class MainActivity : Activity() {
                 text = "○"
                 width = dp(28)
                 textSize = 16f
-                setTextColor(skin.accent)
+                setTextColor(getColor(R.color.colorPrimary))
             }
             val label = TextView(this).apply {
                 text = name
                 width = dp(96)
-                setTextColor(skin.dim)
-                typeface = skin.fontRes?.let { resources.getFont(it) }
+                setTextColor(getColor(R.color.colorOnSurfaceVariant))
                 textSize = 13f
             }
             val bar = ProgressBar(this, null, android.R.attr.progressBarStyleHorizontal).apply {
                 max = 100
-                progressTintList = ColorStateList.valueOf(skin.accent)
+                progressTintList = ColorStateList.valueOf(getColor(R.color.colorPrimary))
             }
             val pct = TextView(this).apply {
                 text = "0%"
                 width = dp(44)
                 gravity = android.view.Gravity.END
-                setTextColor(skin.dim)
+                setTextColor(getColor(R.color.colorOnSurfaceVariant))
                 textSize = 12f
             }
             val eta = TextView(this).apply {
                 text = ""
                 width = dp(64)
                 gravity = android.view.Gravity.END
-                setTextColor(skin.dim)
+                setTextColor(getColor(R.color.colorOnSurfaceVariant))
                 textSize = 12f
             }
             row.addView(icon)
@@ -458,10 +383,18 @@ class MainActivity : Activity() {
                     promptFile.outputStream().use { output -> input.copyTo(output) }
                 }
             }
-            punctEngine = PunctEngine(File(root, "punct"))
             val p = Pipeline(this, root)
             p.load { setStatus(it) }
             pipeline = p
+            // Пунктуация (onnxruntime) несовместима с sherpa-onnx по символьным
+            // версиям libonnxruntime.so (VERS_1.23.0 vs VERS_1.28.2) — делаем её
+            // опциональной, чтобы ASR+диаризация работали независимо.
+            try {
+                punctEngine = PunctEngine(File(root, "punct"))
+            } catch (e: Throwable) {
+                Log.e("Meevo", "punct disabled: " + e.message)
+                punctEngine = null
+            }
             modelsReady = true
             ui {
                 metaText.text = "Офлайн · модели загружены"
@@ -603,6 +536,24 @@ class MainActivity : Activity() {
                     ui { metaText.text = "Ошибка файла: " + e.message }
                 }
             }.start()
+        } else if (requestCode == REQ_EXPORT && resultCode == RESULT_OK && data?.data != null) {
+            val treeUri = data.data!!
+            Thread {
+                val tree = DocumentFile.fromTreeUri(this, treeUri)
+                if (tree == null) {
+                    ui { exportText.text = "Не удалось открыть выбранную папку" }
+                    return@Thread
+                }
+                try {
+                    val count = writeExports(tree)
+                    ui {
+                        exportText.text = "Экспортировано файлов: $count (JSON, SRT, TXT, схема)"
+                        flashSuccess(exportButton, "Экспорт готов")
+                    }
+                } catch (e: Exception) {
+                    ui { exportText.text = "Ошибка экспорта: " + e.message }
+                }
+            }.start()
         }
     }
 
@@ -642,7 +593,7 @@ class MainActivity : Activity() {
         Thread {
             try {
                 setStage("Декод", 10)
-                stageText.text = "Декодирование аудио..."
+                ui { stageText.text = "Декодирование аудио..." }
                 val samples = AudioDecoder.decodeToMono16k(f, 16000)
                 if (samples.isEmpty() || samples.size < 8000) {
                     throw IllegalArgumentException("Не удалось декодировать аудио или файл слишком короткий")
@@ -650,10 +601,10 @@ class MainActivity : Activity() {
                 audioDurSec = samples.size / 16000f
                 setStage("Декод", 100)
 
-                val asrSegs = p.asr(samples, { stageText.text = it }) { setStage("ASR", it) }
-                val diarSegs = p.diarize(samples, { stageText.text = it }) { setStage("Диаризация", it) }
+                val asrSegs = p.asr(samples, { ui { stageText.text = it } }) { setStage("ASR", it) }
+                val diarSegs = p.diarize(samples, { ui { stageText.text = it } }) { setStage("Диаризация", it) }
 
-                stageText.text = "Сборка реплик..."
+                ui { stageText.text = "Сборка реплик..." }
                 merged = p.merge(asrSegs, diarSegs)
 
                 val pe = punctEngine
@@ -662,7 +613,7 @@ class MainActivity : Activity() {
                     fn
                 } else null
                 val json = p.toJson(audioId, audioDurSec, merged, punctFn,
-                    { stageText.text = it }) { setStage("Пунктуация", it) }
+                    { ui { stageText.text = it } }) { setStage("Пунктуация", it) }
                 lastJson = json
                 lastAudioId = audioId
 
@@ -670,27 +621,27 @@ class MainActivity : Activity() {
                 try {
                     val e = getLlm()
                     setStage("LLM-анализ", 5)
-                    stageText.text = "LLM: склейка разрезанных фраз..."
+                    ui { stageText.text = "LLM: склейка разрезанных фраз..." }
                     val merges = e.findMerges(buildDialog())
                     applyMerges(merges)
                     setStage("LLM-анализ", 35)
 
-                    stageText.text = "LLM: главы..."
+                    ui { stageText.text = "LLM: главы..." }
                     val chapters = e.chapters(buildDialog())
-                    renderChapters(chapters)
+                    ui { renderChapters(chapters) }
                     setStage("LLM-анализ", 70)
 
-                    stageText.text = "LLM: конспект..."
+                    ui { stageText.text = "LLM: конспект..." }
                     val summary = e.summarize(buildDialog())
-                    summaryText.text = summary
+                    ui { summaryText.text = summary }
                     lastJson?.put("summary", summary)
                     lastJson?.optJSONObject("meta")
                         ?.put("llm_model", "Vikhrmodels/QVikhr-3-1.7B-Instruction-noreasoning int4")
                     setStage("LLM-анализ", 100)
-                } catch (e: Exception) {
+                } catch (e: Throwable) {
                     Log.e("Meevo", "llm analysis failed", e)
                     setStage("LLM-анализ", 100)
-                    stageText.text = "LLM-анализ пропущен: " + e.message
+                    ui { stageText.text = "LLM-анализ пропущен: " + e.message }
                 }
 
                 val totalMs = System.currentTimeMillis() - runStartMs
@@ -863,7 +814,7 @@ class MainActivity : Activity() {
             val tv = TextView(this)
             tv.text = String.format(Locale.US, "[%s] %s", fmtTime((startSec * 1000).toLong()), title)
             tv.textSize = 14f
-            tv.setTextColor(skin.text)
+            tv.setTextColor(getColor(R.color.colorOnSurface))
             tv.setPadding(0, 12, 0, 12)
             tv.setOnClickListener {
                 seekTo((startSec * 1000).toInt())
@@ -937,7 +888,7 @@ class MainActivity : Activity() {
                 spk, fmtTime(start.toLong()), s.getString("text")
             )
             tv.textSize = 13f
-            tv.setTextColor(skin.text)
+            tv.setTextColor(getColor(R.color.colorOnSurface))
             tv.setPadding(0, 10, 0, 10)
             if (s.optBoolean("doubtful")) tv.text = "⚠ " + tv.text
             tv.setOnClickListener {
@@ -954,18 +905,34 @@ class MainActivity : Activity() {
         panelChapters.visibility = if (tab == "chapters") View.VISIBLE else View.GONE
     }
 
-    // ---------- Экспорт (одна кнопка — все форматы) ----------
+    // ---------- Экспорт (одна кнопка — все форматы, выбор папки через SAF) ----------
     private fun exportAll() {
-        val json = lastJson ?: return
-        val id = lastAudioId ?: return
-        val dir = getExternalFilesDir("exports") ?: filesDir
-        dir.mkdirs()
-        File(dir, "$id.json").writeText(json.toString(2))
-        File(dir, "$id.srt").writeText(buildSrt())
-        File(dir, "$id.txt").writeText(buildTxt())
-        File(dir, "$id.schema.json").writeText(buildSchema())
-        exportText.text = "Сохранено в " + dir.absolutePath + ": JSON, SRT, TXT, схема"
-        flashSuccess(exportButton, "Экспорт: JSON · SRT · TXT · Схема")
+        if (lastJson == null || lastAudioId == null) return
+        val intent = Intent(Intent.ACTION_OPEN_DOCUMENT_TREE)
+        try {
+            startActivityForResult(intent, REQ_EXPORT)
+        } catch (e: Exception) {
+            ui { exportText.text = "Не удалось открыть выбор папки: " + e.message }
+        }
+    }
+
+    private fun writeExports(dir: DocumentFile): Int {
+        val json = lastJson ?: return 0
+        val id = lastAudioId ?: return 0
+        var n = 0
+        fun write(name: String, mime: String, content: String) {
+            val f = dir.createFile(mime, name)
+                ?: throw java.io.IOException("Не удалось создать файл $name")
+            contentResolver.openOutputStream(f.uri)?.use { os ->
+                os.write(content.toByteArray(Charsets.UTF_8))
+            } ?: throw java.io.IOException("Не удалось записать файл $name")
+            n++
+        }
+        write("$id.json", "application/json", json.toString(2))
+        write("$id.srt", "application/x-subrip", buildSrt())
+        write("$id.txt", "text/plain", buildTxt())
+        write("$id.schema.json", "application/json", buildSchema())
+        return n
     }
 
     private fun buildSrt(): String {

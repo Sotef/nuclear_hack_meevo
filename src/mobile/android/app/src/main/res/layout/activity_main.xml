@@ -1,39 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/rootBox"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp">
 
-    <!-- Верх: имя + выбор оформления -->
-    <LinearLayout
+    <TextView
+        android:id="@+id/titleText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical">
-
-        <TextView
-            android:id="@+id/titleText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Meevo"
-            android:textSize="22sp"
-            android:textStyle="bold" />
-
-        <Spinner
-            android:id="@+id/themeSpinner"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
+        android:text="Meevo"
+        android:textAppearance="?attr/textAppearanceHeadlineMedium" />
 
     <TextView
         android:id="@+id/metaText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:text="Офлайн · модели загружаются..."
-        android:textSize="12sp" />
+        android:textAppearance="?attr/textAppearanceBodySmall"
+        android:textColor="?attr/colorOnSurfaceVariant" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -52,92 +40,113 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="12dp">
-
-                    <Button
-                        android:id="@+id/recordButton"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Микрофон" />
-
-                    <Button
-                        android:id="@+id/fileButton"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Файл..." />
-                </LinearLayout>
-
-                <!-- Пульс записи -->
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="120dp"
-                    android:layout_marginTop="8dp">
-
-                    <View
-                        android:id="@+id/ring1"
-                        android:layout_width="72dp"
-                        android:layout_height="72dp"
-                        android:layout_gravity="center"
-                        android:background="@drawable/ring_bg" />
-
-                    <View
-                        android:id="@+id/ring2"
-                        android:layout_width="72dp"
-                        android:layout_height="72dp"
-                        android:layout_gravity="center"
-                        android:background="@drawable/ring_bg" />
-
-                    <View
-                        android:id="@+id/ring3"
-                        android:layout_width="72dp"
-                        android:layout_height="72dp"
-                        android:layout_gravity="center"
-                        android:background="@drawable/ring_bg" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:orientation="vertical"
-                        android:gravity="center">
-
-                        <View
-                            android:id="@+id/recDot"
-                            android:layout_width="12dp"
-                            android:layout_height="12dp"
-                            android:background="@drawable/dot_bg" />
-
-                        <TextView
-                            android:id="@+id/recTimer"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="00:00"
-                            android:textSize="18sp" />
-                    </LinearLayout>
-                </FrameLayout>
-
-                <TextView
-                    android:id="@+id/sourceLabel"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Источник: demo_long.wav"
-                    android:textSize="13sp" />
-
-                <!-- ЕДИНСТВЕННАЯ КНОПКА ЗАПУСКА -->
-                <Button
-                    android:id="@+id/runButton"
+                <com.google.android.material.card.MaterialCardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
-                    android:text="Обработать всё"
-                    android:textSize="16sp"
-                    android:enabled="false" />
+                    app:cardBackgroundColor="?attr/colorSurfaceContainerLow"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="?attr/colorOutlineVariant"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/recordButton"
+                                style="@style/Widget.Material3.Button"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Микрофон" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/fileButton"
+                                style="@style/Widget.Material3.Button.TonalButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:layout_weight="1"
+                                android:text="Файл…" />
+                        </LinearLayout>
+
+                        <!-- Пульс записи -->
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:layout_marginTop="8dp">
+
+                            <View
+                                android:id="@+id/ring1"
+                                android:layout_width="72dp"
+                                android:layout_height="72dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/ring_bg" />
+
+                            <View
+                                android:id="@+id/ring2"
+                                android:layout_width="72dp"
+                                android:layout_height="72dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/ring_bg" />
+
+                            <View
+                                android:id="@+id/ring3"
+                                android:layout_width="72dp"
+                                android:layout_height="72dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/ring_bg" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <View
+                                    android:id="@+id/recDot"
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    android:background="@drawable/dot_bg" />
+
+                                <TextView
+                                    android:id="@+id/recTimer"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:text="00:00"
+                                    android:textAppearance="?attr/textAppearanceHeadlineSmall" />
+                            </LinearLayout>
+                        </FrameLayout>
+
+                        <TextView
+                            android:id="@+id/sourceLabel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Источник: demo_long.wav"
+                            android:textAppearance="?attr/textAppearanceBodyMedium"
+                            android:textColor="?attr/colorOnSurfaceVariant" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/runButton"
+                            style="@style/Widget.Material3.Button"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:enabled="false"
+                            android:text="Обработать всё" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
             </LinearLayout>
 
             <!-- ЭКРАН 2: ЭТАПЫ + ETA -->
@@ -148,50 +157,69 @@
                 android:orientation="vertical"
                 android:visibility="gone">
 
-                <TextView
-                    android:id="@+id/etaText"
+                <com.google.android.material.card.MaterialCardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:textSize="22sp"
-                    android:textStyle="bold" />
+                    android:layout_marginTop="12dp"
+                    app:cardBackgroundColor="?attr/colorSurfaceContainerLow"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="?attr/colorOutlineVariant"
+                    app:strokeWidth="1dp">
 
-                <TextView
-                    android:id="@+id/stageText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="13sp" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical"
-                    android:layout_marginTop="8dp">
-
-                    <ProgressBar
-                        android:id="@+id/overallBar"
-                        style="?android:attr/progressBarStyleHorizontal"
-                        android:layout_width="0dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:max="100" />
+                        android:orientation="vertical"
+                        android:padding="16dp">
 
-                    <TextView
-                        android:id="@+id/overallPct"
-                        android:layout_width="48dp"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:text="0%"
-                        android:textSize="14sp" />
-                </LinearLayout>
+                        <TextView
+                            android:id="@+id/etaText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceHeadlineSmall" />
 
-                <LinearLayout
-                    android:id="@+id/stagesBox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginTop="12dp" />
+                        <TextView
+                            android:id="@+id/stageText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceBodyMedium"
+                            android:textColor="?attr/colorOnSurfaceVariant" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ProgressBar
+                                android:id="@+id/overallBar"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:max="100"
+                                android:progressBackgroundTint="?attr/colorSurfaceContainerHighest"
+                                android:progressTint="?attr/colorPrimary" />
+
+                            <TextView
+                                android:id="@+id/overallPct"
+                                android:layout_width="48dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="end"
+                                android:text="0%"
+                                android:textAppearance="?attr/textAppearanceBodyMedium" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/stagesBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="vertical" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
             </LinearLayout>
 
             <!-- ЭКРАН 3: РЕЗУЛЬТАТ -->
@@ -202,124 +230,156 @@
                 android:orientation="vertical"
                 android:visibility="gone">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="8dp">
-
-                    <Button
-                        android:id="@+id/tabText"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Текст" />
-
-                    <Button
-                        android:id="@+id/tabSummary"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Сводка" />
-
-                    <Button
-                        android:id="@+id/tabChapters"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Главы" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical">
-
-                    <Button
-                        android:id="@+id/playButton"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="▶"
-                        android:enabled="false" />
-
-                    <TextView
-                        android:id="@+id/timeText"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="0:00"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                    <SeekBar
-                        android:id="@+id/seekBar"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:enabled="false" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/panelText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <LinearLayout
-                        android:id="@+id/segmentsBox"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/panelSummary"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:visibility="gone">
-
-                    <TextView
-                        android:id="@+id/summaryText"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="14sp"
-                        android:paddingTop="8dp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/panelChapters"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:visibility="gone">
-
-                    <LinearLayout
-                        android:id="@+id/chaptersBox"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical" />
-                </LinearLayout>
-
-                <!-- Одна кнопка экспорта -->
-                <Button
-                    android:id="@+id/exportButton"
+                <com.google.android.material.card.MaterialCardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
-                    android:text="Экспорт: JSON · SRT · TXT · Схема" />
+                    app:cardBackgroundColor="?attr/colorSurfaceContainerLow"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="?attr/colorOutlineVariant"
+                    app:strokeWidth="1dp">
 
-                <TextView
-                    android:id="@+id/exportText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="12sp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
 
-                <Button
-                    android:id="@+id/backButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="← Новая запись" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/tabText"
+                                style="@style/Widget.Material3.Button.TextButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Текст" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/tabSummary"
+                                style="@style/Widget.Material3.Button.TextButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Сводка" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/tabChapters"
+                                style="@style/Widget.Material3.Button.TextButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Главы" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/playButton"
+                                style="@style/Widget.Material3.Button.TextButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:enabled="false"
+                                android:insetTop="0dp"
+                                android:insetBottom="0dp"
+                                android:minWidth="0dp"
+                                android:text="▶" />
+
+                            <TextView
+                                android:id="@+id/timeText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:text="0:00"
+                                android:textAppearance="?attr/textAppearanceTitleMedium" />
+
+                            <SeekBar
+                                android:id="@+id/seekBar"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_weight="1"
+                                android:enabled="false"
+                                android:progressBackgroundTint="?attr/colorSurfaceContainerHighest"
+                                android:progressTint="?attr/colorPrimary"
+                                android:thumbTint="?attr/colorPrimary" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/panelText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/segmentsBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/panelSummary"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/summaryText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="8dp"
+                                android:textAppearance="?attr/textAppearanceBodyMedium" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/panelChapters"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <LinearLayout
+                                android:id="@+id/chaptersBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical" />
+                        </LinearLayout>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/exportButton"
+                            style="@style/Widget.Material3.Button.TonalButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="Экспорт: JSON · SRT · TXT · Схема" />
+
+                        <TextView
+                            android:id="@+id/exportText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:textAppearance="?attr/textAppearanceBodySmall"
+                            android:textColor="?attr/colorOnSurfaceVariant" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/backButton"
+                            style="@style/Widget.Material3.Button.TextButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="← Новая запись" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
