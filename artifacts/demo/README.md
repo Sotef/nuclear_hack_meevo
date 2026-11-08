@@ -8,4 +8,5 @@
   контракта v0.2 (13 записей тестового набора) на разных этапах проекта.
 - Демо-аудио встроены в APK (`assets/audio/`): 7-минутная сказка (LibriVox,
   public domain) и короткие разговорные фрагменты.
-- Видео и скриншты демонстрации — добавьте сюда при наличии.
+- **Видео демонстрации**: [Google Drive](https://drive.google.com/drive/folders/1Qq2ZLrtHTSUZS8RCehrvcxe_nkmHjHNk?usp=sharing)
+- Скриншоты интерфейса (Material 3, светлая/тёмная тема) — `docs/ui_screenshots/`.
